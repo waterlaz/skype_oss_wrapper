@@ -154,7 +154,7 @@ int pa_context_set_sink_mute_by_index(){ printf("pa_context_set_sink_mute_by_ind
 int pa_context_set_sink_mute_by_name(){ printf("pa_context_set_sink_mute_by_name\n");}
 int pa_context_set_sink_port_by_index(){ printf("pa_context_set_sink_port_by_index\n");}
 int pa_context_set_sink_port_by_name(){ printf("pa_context_set_sink_port_by_name\n");}
-int pa_context_set_sink_volume_by_index(){ printf("pa_context_set_sink_volume_by_index\n");}
+/*int pa_context_set_sink_volume_by_index(){ printf("pa_context_set_sink_volume_by_index\n");}*/
 int pa_context_set_sink_volume_by_name(){ printf("pa_context_set_sink_volume_by_name\n");}
 int pa_context_set_source_mute_by_index(){ printf("pa_context_set_source_mute_by_index\n");}
 int pa_context_set_source_mute_by_name(){ printf("pa_context_set_source_mute_by_name\n");}
@@ -162,7 +162,7 @@ int pa_context_set_source_output_mute(){ printf("pa_context_set_source_output_mu
 int pa_context_set_source_output_volume(){ printf("pa_context_set_source_output_volume\n");}
 int pa_context_set_source_port_by_index(){ printf("pa_context_set_source_port_by_index\n");}
 int pa_context_set_source_port_by_name(){ printf("pa_context_set_source_port_by_name\n");}
-int pa_context_set_source_volume_by_index(){ printf("pa_context_set_source_volume_by_index\n");}
+/*int pa_context_set_source_volume_by_index(){ printf("pa_context_set_source_volume_by_index\n");}*/
 int pa_context_set_source_volume_by_name(){ printf("pa_context_set_source_volume_by_name\n");}
 /*int pa_context_set_state_callback(){ printf("pa_context_set_state_callback\n");}*/
 /*int pa_context_set_subscribe_callback(){ printf("pa_context_set_subscribe_callback\n");}*/
@@ -173,7 +173,7 @@ int pa_context_suspend_sink_by_name(){ printf("pa_context_suspend_sink_by_name\n
 int pa_context_suspend_source_by_index(){ printf("pa_context_suspend_source_by_index\n");}
 int pa_context_suspend_source_by_name(){ printf("pa_context_suspend_source_by_name\n");}
 int pa_context_unload_module(){ printf("pa_context_unload_module\n");}
-int pa_context_unref(){ printf("pa_context_unref\n");}
+/*int pa_context_unref(){ printf("pa_context_unref\n");}*/
 int pa_convert_size(){ printf("pa_convert_size\n");}
 int pa_cstrerror(){ printf("pa_cstrerror\n");}
 int pa_cvolume_avg(){ printf("pa_cvolume_avg\n");}
@@ -746,13 +746,13 @@ int pa_stream_connect_upload(){ printf("pa_stream_connect_upload\n");}
 /*int pa_stream_cork(){ printf("pa_stream_cork\n");}*/
 /*int pa_stream_disconnect(){ printf("pa_stream_disconnect\n");}*/
 int pa_stream_drain(){ printf("pa_stream_drain\n");}
-int pa_stream_drop(){ printf("pa_stream_drop\n");}
+/*int pa_stream_drop(){ printf("pa_stream_drop\n");}*/
 int pa_stream_finish_upload(){ printf("pa_stream_finish_upload\n");}
 int pa_stream_flush(){ printf("pa_stream_flush\n");}
 /*int pa_stream_get_buffer_attr(){ printf("pa_stream_get_buffer_attr\n");}*/
 int pa_stream_get_channel_map(){ printf("pa_stream_get_channel_map\n");}
 int pa_stream_get_context(){ printf("pa_stream_get_context\n");}
-int pa_stream_get_device_index(){ printf("pa_stream_get_device_index\n");}
+/*int pa_stream_get_device_index(){ printf("pa_stream_get_device_index\n");}*/
 int pa_stream_get_device_name(){ printf("pa_stream_get_device_name\n");}
 int pa_stream_get_format_info(){ printf("pa_stream_get_format_info\n");}
 int pa_stream_get_index(){ printf("pa_stream_get_index\n");}
@@ -933,7 +933,11 @@ int pa_xrealloc(){ printf("pa_xrealloc\n");}
 int pa_xstrdup(){ printf("pa_xstrdup\n");}
 
 
-#define log printf
+#define log empty_log
+
+static void empty_log(char* format, ...){
+    
+}
 
 typedef struct pa_mainloop_api{
     void *userdata;
@@ -958,6 +962,7 @@ typedef struct pa_mainloop_api{
     void* (*rtclock_time_new)();
     void (*rtclock_time_restart)();
 } pa_mainloop_api;
+
 
 typedef void(* pa_context_notify_cb_t)(int *c, void *userdata);
 
@@ -1068,21 +1073,7 @@ enum  	pa_seek_mode {
 typedef enum pa_seek_mode pa_seek_mode_t;
 typedef void* pa_free_cb_t;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+static int operation;
 
 static pa_context_notify_cb_t state_callback;
 
@@ -1301,6 +1292,7 @@ int* pa_stream_cork(stream_t *s, int b, pa_stream_success_cb_t cb, void *userdat
     s->corked = b;
     usleep(1500);
     cb(s, 1, userdata);
+    return &operation;
 }
 
 static void *oss_thread_function(void *s1){
@@ -1332,11 +1324,17 @@ static void *oss_thread_function(void *s1){
 
 int pa_stream_peek(stream_t *s, const void **data,	size_t *nbytes){
     static char g_data[10240];
-    log("pa_stream_peek: ");
+    log("pa_stream_peek: reading from /dev/dsp\n");
     *nbytes = read(s->fd, g_data, 10240);
     *data = g_data;
     return 0;
 }
+
+int pa_stream_drop(stream_t *p){
+    log("pa_stream_peek: nothing to do here\n");
+    return 0;
+}
+
 
 int pa_stream_connect_playback (stream_t *s, const char *dev, const pa_buffer_attr *attr,	
                                 int flags, const int *volume,	int *sync_stream){
@@ -1409,7 +1407,7 @@ void pa_stream_unref(stream_t* s){
 
 
 int pa_stream_write(stream_t *s, const void *data, size_t nbytes, pa_free_cb_t free_cb,	int64_t offset,	pa_seek_mode_t seek){
-    log("pa_stream_write: nbytes=%llu   free_cb=%p   offset=%d seek_mode=%d \n", nbytes, free_cb, offset, seek);
+    log("pa_stream_write: nbytes=%zu   free_cb=%p   offset=%lld seek_mode=%d \n", nbytes, free_cb, offset, seek);
     why_buffer_write(s->buffer, (char*)data, nbytes);
     return 0;
 }
@@ -1419,6 +1417,7 @@ int* pa_stream_trigger(stream_t* s, pa_stream_success_cb_t cb, void *userdata){
     in_thread = 1;
     cb(s, 1, userdata);
     in_thread = 0;
+    return &operation;
 }
 
 
@@ -1433,6 +1432,26 @@ void pa_threaded_mainloop_signal(int *m, int wait_for_accept){
     return;
 }
 
+uint32_t pa_stream_get_device_index(stream_t *s){
+    log("pa_stream_get_device_index: not implemented\n");
+    return 0;
+}
+
+typedef void(* pa_context_success_cb_t)(int *c, int success, void *userdata);
+
+int* pa_context_set_sink_volume_by_index(int *c, uint32_t idx, const int *volume, 
+                                         pa_context_success_cb_t cb, void *userdata){
+    log("pa_context_set_sink_volume_by_index: not doing anything\n");
+    cb(c, 1, userdata);
+    return &operation;
+}
+
+int *pa_context_set_source_volume_by_index(int *c, uint32_t idx, 
+                                           const int *volume, pa_context_success_cb_t cb, void *userdata){
+    log("pa_context_set_source_volume_by_index: not doing anything\n");
+    //cb(c, 1, userdata); this causes segfault :(
+    return &operation;
+}
 
 
 enum  	pa_subscription_event_type {
@@ -1512,9 +1531,6 @@ int* pa_context_subscribe(int *c, pa_subscription_mask_t m, pa_context_success_c
  
 }
 
-
-
-
 typedef struct pa_spawn_api {
     void (*prefork)(void);
     void (*postfork)(void);
@@ -1531,6 +1547,10 @@ int pa_context_connect (int * c, const char * server, int flags, pa_spawn_api *a
     in_thread = 0;
     log("RETURNED FROM CALLBACK\n");
     return 0;
+}
+
+void pa_context_unref(int *c){
+    log("pa_context_unref: nothing to do here\n");
 }
 
 
@@ -1554,7 +1574,6 @@ typedef enum pa_context_state  pa_context_state_t;
 pa_context_state_t pa_context_get_state(int *c){
     return PA_CONTEXT_READY;
 }
-
 
 enum  	pa_operation_state {
   PA_OPERATION_RUNNING,
