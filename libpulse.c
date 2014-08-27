@@ -8,929 +8,8 @@
 #include <pthread.h>
 #include <unistd.h>
 
-int pa_accept_cloexec(){ printf("pa_accept_cloexec\n");}
-int pa_ascii_filter(){ printf("pa_ascii_filter\n");}
-int pa_ascii_valid(){ printf("pa_ascii_valid\n");}
-int pa_atod(){ printf("pa_atod\n");}
-int pa_atoi(){ printf("pa_atoi\n");}
-int pa_atol(){ printf("pa_atol\n");}
-int pa_atou(){ printf("pa_atou\n");}
-int pa_aupdate_free(){ printf("pa_aupdate_free\n");}
-int pa_aupdate_new(){ printf("pa_aupdate_new\n");}
-int pa_aupdate_read_begin(){ printf("pa_aupdate_read_begin\n");}
-int pa_aupdate_read_end(){ printf("pa_aupdate_read_end\n");}
-int pa_aupdate_write_begin(){ printf("pa_aupdate_write_begin\n");}
-int pa_aupdate_write_end(){ printf("pa_aupdate_write_end\n");}
-int pa_aupdate_write_swap(){ printf("pa_aupdate_write_swap\n");}
-int pa_authkey_load(){ printf("pa_authkey_load\n");}
-int pa_authkey_load_auto(){ printf("pa_authkey_load_auto\n");}
-int pa_authkey_save(){ printf("pa_authkey_save\n");}
-int pa_autospawn_lock_acquire(){ printf("pa_autospawn_lock_acquire\n");}
-int pa_autospawn_lock_done(){ printf("pa_autospawn_lock_done\n");}
-int pa_autospawn_lock_init(){ printf("pa_autospawn_lock_init\n");}
-int pa_autospawn_lock_release(){ printf("pa_autospawn_lock_release\n");}
-int pa_bitset_equals(){ printf("pa_bitset_equals\n");}
-int pa_bitset_get(){ printf("pa_bitset_get\n");}
-int pa_bitset_set(){ printf("pa_bitset_set\n");}
-int pa_bytes_per_second(){ printf("pa_bytes_per_second\n");}
-int pa_bytes_snprint(){ printf("pa_bytes_snprint\n");}
-int pa_bytes_to_usec(){ printf("pa_bytes_to_usec\n");}
-int pa_bytes_to_usec_round_up(){ printf("pa_bytes_to_usec_round_up\n");}
-int pa_channel_map_can_balance(){ printf("pa_channel_map_can_balance\n");}
-int pa_channel_map_can_fade(){ printf("pa_channel_map_can_fade\n");}
-int pa_channel_map_compatible(){ printf("pa_channel_map_compatible\n");}
-int pa_channel_map_equal(){ printf("pa_channel_map_equal\n");}
-int pa_channel_map_has_position(){ printf("pa_channel_map_has_position\n");}
-int pa_channel_map_init(){ printf("pa_channel_map_init\n");}
-int pa_channel_map_init_auto(){ printf("pa_channel_map_init_auto\n");}
-int pa_channel_map_init_extend(){ printf("pa_channel_map_init_extend\n");}
-/*int pa_channel_map_init_mono(){ printf("pa_channel_map_init_mono\n");}*/
-/*int pa_channel_map_init_stereo(){ printf("pa_channel_map_init_stereo\n");}*/
-int pa_channel_map_mask(){ printf("pa_channel_map_mask\n");}
-int pa_channel_map_parse(){ printf("pa_channel_map_parse\n");}
-int pa_channel_map_snprint(){ printf("pa_channel_map_snprint\n");}
-int pa_channel_map_superset(){ printf("pa_channel_map_superset\n");}
-int pa_channel_map_to_name(){ printf("pa_channel_map_to_name\n");}
-int pa_channel_map_to_pretty_name(){ printf("pa_channel_map_to_pretty_name\n");}
-int pa_channel_map_valid(){ printf("pa_channel_map_valid\n");}
-int pa_channel_position_from_string(){ printf("pa_channel_position_from_string\n");}
-int pa_channel_position_to_pretty_string(){ printf("pa_channel_position_to_pretty_string\n");}
-int pa_channel_position_to_string(){ printf("pa_channel_position_to_string\n");}
-int pa_channels_valid(){ printf("pa_channels_valid\n");}
-int pa_check_in_group(){ printf("pa_check_in_group\n");}
-int pa_check_signal_is_blocked(){ printf("pa_check_signal_is_blocked\n");}
-int pa_client_conf_env(){ printf("pa_client_conf_env\n");}
-int pa_client_conf_free(){ printf("pa_client_conf_free\n");}
-int pa_client_conf_from_x11(){ printf("pa_client_conf_from_x11\n");}
-int pa_client_conf_load(){ printf("pa_client_conf_load\n");}
-int pa_client_conf_load_cookie_from_file(){ printf("pa_client_conf_load_cookie_from_file\n");}
-int pa_client_conf_load_cookie_from_hex(){ printf("pa_client_conf_load_cookie_from_hex\n");}
-int pa_client_conf_new(){ printf("pa_client_conf_new\n");}
-int pa_client_conf_set_cookie(){ printf("pa_client_conf_set_cookie\n");}
-int pa_close(){ printf("pa_close\n");}
-int pa_close_all(){ printf("pa_close_all\n");}
-int pa_close_allv(){ printf("pa_close_allv\n");}
-int pa_close_pipe(){ printf("pa_close_pipe\n");}
-int pa_cond_free(){ printf("pa_cond_free\n");}
-int pa_cond_new(){ printf("pa_cond_new\n");}
-int pa_cond_signal(){ printf("pa_cond_signal\n");}
-int pa_cond_wait(){ printf("pa_cond_wait\n");}
-int pa_config_parse(){ printf("pa_config_parse\n");}
-int pa_config_parse_bool(){ printf("pa_config_parse_bool\n");}
-int pa_config_parse_int(){ printf("pa_config_parse_int\n");}
-int pa_config_parse_not_bool(){ printf("pa_config_parse_not_bool\n");}
-int pa_config_parse_size(){ printf("pa_config_parse_size\n");}
-int pa_config_parse_string(){ printf("pa_config_parse_string\n");}
-int pa_config_parse_unsigned(){ printf("pa_config_parse_unsigned\n");}
-int pa_context_add_autoload(){ printf("pa_context_add_autoload\n");}
-/*int pa_context_connect(){ printf("pa_context_connect\n");}*/
-int pa_context_disconnect(){ printf("pa_context_disconnect\n");}
-/*int pa_context_drain(){ printf("pa_context_drain\n");}*/
-int pa_context_errno(){ printf("pa_context_errno\n");}
-int pa_context_exit_daemon(){ printf("pa_context_exit_daemon\n");}
-int pa_context_get_autoload_info_by_index(){ printf("pa_context_get_autoload_info_by_index\n");}
-int pa_context_get_autoload_info_by_name(){ printf("pa_context_get_autoload_info_by_name\n");}
-int pa_context_get_autoload_info_list(){ printf("pa_context_get_autoload_info_list\n");}
-int pa_context_get_card_info_by_index(){ printf("pa_context_get_card_info_by_index\n");}
-int pa_context_get_card_info_by_name(){ printf("pa_context_get_card_info_by_name\n");}
-int pa_context_get_card_info_list(){ printf("pa_context_get_card_info_list\n");}
-int pa_context_get_client_info(){ printf("pa_context_get_client_info\n");}
-int pa_context_get_client_info_list(){ printf("pa_context_get_client_info_list\n");}
-int pa_context_get_index(){ printf("pa_context_get_index\n");}
-int pa_context_get_module_info(){ printf("pa_context_get_module_info\n");}
-int pa_context_get_module_info_list(){ printf("pa_context_get_module_info_list\n");}
-int pa_context_get_protocol_version(){ printf("pa_context_get_protocol_version\n");}
-int pa_context_get_sample_info_by_index(){ printf("pa_context_get_sample_info_by_index\n");}
-int pa_context_get_sample_info_by_name(){ printf("pa_context_get_sample_info_by_name\n");}
-int pa_context_get_sample_info_list(){ printf("pa_context_get_sample_info_list\n");}
-int pa_context_get_server(){ printf("pa_context_get_server\n");}
-int pa_context_get_server_info(){ printf("pa_context_get_server_info\n");}
-int pa_context_get_server_protocol_version(){ printf("pa_context_get_server_protocol_version\n");}
-int pa_context_get_sink_info_by_index(){ printf("pa_context_get_sink_info_by_index\n");}
-int pa_context_get_sink_info_by_name(){ printf("pa_context_get_sink_info_by_name\n");}
-int pa_context_get_sink_info_list(){ printf("pa_context_get_sink_info_list\n");}
-int pa_context_get_sink_input_info(){ printf("pa_context_get_sink_input_info\n");}
-int pa_context_get_sink_input_info_list(){ printf("pa_context_get_sink_input_info_list\n");}
-int pa_context_get_source_info_by_index(){ printf("pa_context_get_source_info_by_index\n");}
-int pa_context_get_source_info_by_name(){ printf("pa_context_get_source_info_by_name\n");}
-int pa_context_get_source_info_list(){ printf("pa_context_get_source_info_list\n");}
-int pa_context_get_source_output_info(){ printf("pa_context_get_source_output_info\n");}
-int pa_context_get_source_output_info_list(){ printf("pa_context_get_source_output_info_list\n");}
-/*int pa_context_get_state(){ printf("pa_context_get_state\n");}*/
-int pa_context_get_tile_size(){ printf("pa_context_get_tile_size\n");}
-int pa_context_is_local(){ printf("pa_context_is_local\n");}
-int pa_context_is_pending(){ printf("pa_context_is_pending\n");}
-int pa_context_kill_client(){ printf("pa_context_kill_client\n");}
-int pa_context_kill_sink_input(){ printf("pa_context_kill_sink_input\n");}
-int pa_context_kill_source_output(){ printf("pa_context_kill_source_output\n");}
-int pa_context_load_cookie_from_file(){ printf("pa_context_load_cookie_from_file\n");}
-int pa_context_load_module(){ printf("pa_context_load_module\n");}
-int pa_context_move_sink_input_by_index(){ printf("pa_context_move_sink_input_by_index\n");}
-int pa_context_move_sink_input_by_name(){ printf("pa_context_move_sink_input_by_name\n");}
-int pa_context_move_source_output_by_index(){ printf("pa_context_move_source_output_by_index\n");}
-int pa_context_move_source_output_by_name(){ printf("pa_context_move_source_output_by_name\n");}
-/*int pa_context_new(){ printf("pa_context_new\n");}*/
-int pa_context_new_with_proplist(){ printf("pa_context_new_with_proplist\n");}
-int pa_context_play_sample(){ printf("pa_context_play_sample\n");}
-int pa_context_play_sample_with_proplist(){ printf("pa_context_play_sample_with_proplist\n");}
-int pa_context_proplist_remove(){ printf("pa_context_proplist_remove\n");}
-int pa_context_proplist_update(){ printf("pa_context_proplist_update\n");}
-int pa_context_ref(){ printf("pa_context_ref\n");}
-int pa_context_remove_autoload_by_index(){ printf("pa_context_remove_autoload_by_index\n");}
-int pa_context_remove_autoload_by_name(){ printf("pa_context_remove_autoload_by_name\n");}
-int pa_context_remove_sample(){ printf("pa_context_remove_sample\n");}
-int pa_context_rttime_new(){ printf("pa_context_rttime_new\n");}
-int pa_context_rttime_restart(){ printf("pa_context_rttime_restart\n");}
-int pa_context_set_card_profile_by_index(){ printf("pa_context_set_card_profile_by_index\n");}
-int pa_context_set_card_profile_by_name(){ printf("pa_context_set_card_profile_by_name\n");}
-int pa_context_set_default_sink(){ printf("pa_context_set_default_sink\n");}
-int pa_context_set_default_source(){ printf("pa_context_set_default_source\n");}
-int pa_context_set_event_callback(){ printf("pa_context_set_event_callback\n");}
-int pa_context_set_name(){ printf("pa_context_set_name\n");}
-int pa_context_set_port_latency_offset(){ printf("pa_context_set_port_latency_offset\n");}
-int pa_context_set_sink_input_mute(){ printf("pa_context_set_sink_input_mute\n");}
-int pa_context_set_sink_input_volume(){ printf("pa_context_set_sink_input_volume\n");}
-int pa_context_set_sink_mute_by_index(){ printf("pa_context_set_sink_mute_by_index\n");}
-int pa_context_set_sink_mute_by_name(){ printf("pa_context_set_sink_mute_by_name\n");}
-int pa_context_set_sink_port_by_index(){ printf("pa_context_set_sink_port_by_index\n");}
-int pa_context_set_sink_port_by_name(){ printf("pa_context_set_sink_port_by_name\n");}
-/*int pa_context_set_sink_volume_by_index(){ printf("pa_context_set_sink_volume_by_index\n");}*/
-int pa_context_set_sink_volume_by_name(){ printf("pa_context_set_sink_volume_by_name\n");}
-int pa_context_set_source_mute_by_index(){ printf("pa_context_set_source_mute_by_index\n");}
-int pa_context_set_source_mute_by_name(){ printf("pa_context_set_source_mute_by_name\n");}
-int pa_context_set_source_output_mute(){ printf("pa_context_set_source_output_mute\n");}
-int pa_context_set_source_output_volume(){ printf("pa_context_set_source_output_volume\n");}
-int pa_context_set_source_port_by_index(){ printf("pa_context_set_source_port_by_index\n");}
-int pa_context_set_source_port_by_name(){ printf("pa_context_set_source_port_by_name\n");}
-/*int pa_context_set_source_volume_by_index(){ printf("pa_context_set_source_volume_by_index\n");}*/
-int pa_context_set_source_volume_by_name(){ printf("pa_context_set_source_volume_by_name\n");}
-/*int pa_context_set_state_callback(){ printf("pa_context_set_state_callback\n");}*/
-/*int pa_context_set_subscribe_callback(){ printf("pa_context_set_subscribe_callback\n");}*/
-int pa_context_stat(){ printf("pa_context_stat\n");}
-/*int pa_context_subscribe(){ printf("pa_context_subscribe\n");}*/
-int pa_context_suspend_sink_by_index(){ printf("pa_context_suspend_sink_by_index\n");}
-int pa_context_suspend_sink_by_name(){ printf("pa_context_suspend_sink_by_name\n");}
-int pa_context_suspend_source_by_index(){ printf("pa_context_suspend_source_by_index\n");}
-int pa_context_suspend_source_by_name(){ printf("pa_context_suspend_source_by_name\n");}
-int pa_context_unload_module(){ printf("pa_context_unload_module\n");}
-/*int pa_context_unref(){ printf("pa_context_unref\n");}*/
-int pa_convert_size(){ printf("pa_convert_size\n");}
-int pa_cstrerror(){ printf("pa_cstrerror\n");}
-int pa_cvolume_avg(){ printf("pa_cvolume_avg\n");}
-int pa_cvolume_avg_mask(){ printf("pa_cvolume_avg_mask\n");}
-int pa_cvolume_channels_equal_to(){ printf("pa_cvolume_channels_equal_to\n");}
-int pa_cvolume_compatible(){ printf("pa_cvolume_compatible\n");}
-int pa_cvolume_compatible_with_channel_map(){ printf("pa_cvolume_compatible_with_channel_map\n");}
-int pa_cvolume_dec(){ printf("pa_cvolume_dec\n");}
-int pa_cvolume_equal(){ printf("pa_cvolume_equal\n");}
-int pa_cvolume_get_balance(){ printf("pa_cvolume_get_balance\n");}
-int pa_cvolume_get_fade(){ printf("pa_cvolume_get_fade\n");}
-int pa_cvolume_get_position(){ printf("pa_cvolume_get_position\n");}
-int pa_cvolume_inc(){ printf("pa_cvolume_inc\n");}
-int pa_cvolume_inc_clamp(){ printf("pa_cvolume_inc_clamp\n");}
-int pa_cvolume_init(){ printf("pa_cvolume_init\n");}
-int pa_cvolume_max(){ printf("pa_cvolume_max\n");}
-int pa_cvolume_max_mask(){ printf("pa_cvolume_max_mask\n");}
-int pa_cvolume_merge(){ printf("pa_cvolume_merge\n");}
-int pa_cvolume_min(){ printf("pa_cvolume_min\n");}
-int pa_cvolume_min_mask(){ printf("pa_cvolume_min_mask\n");}
-int pa_cvolume_remap(){ printf("pa_cvolume_remap\n");}
-int pa_cvolume_scale(){ printf("pa_cvolume_scale\n");}
-int pa_cvolume_scale_mask(){ printf("pa_cvolume_scale_mask\n");}
-/*int pa_cvolume_set(){ printf("pa_cvolume_set\n");}*/
-int pa_cvolume_set_balance(){ printf("pa_cvolume_set_balance\n");}
-int pa_cvolume_set_fade(){ printf("pa_cvolume_set_fade\n");}
-int pa_cvolume_set_position(){ printf("pa_cvolume_set_position\n");}
-int pa_cvolume_snprint(){ printf("pa_cvolume_snprint\n");}
-int pa_cvolume_snprint_verbose(){ printf("pa_cvolume_snprint_verbose\n");}
-int pa_cvolume_valid(){ printf("pa_cvolume_valid\n");}
-int pa_deinterleave(){ printf("pa_deinterleave\n");}
-int pa_detect_fork(){ printf("pa_detect_fork\n");}
-int pa_disable_sigpipe(){ printf("pa_disable_sigpipe\n");}
-int pa_dynarray_append(){ printf("pa_dynarray_append\n");}
-int pa_dynarray_free(){ printf("pa_dynarray_free\n");}
-int pa_dynarray_get(){ printf("pa_dynarray_get\n");}
-int pa_dynarray_new(){ printf("pa_dynarray_new\n");}
-int pa_dynarray_size(){ printf("pa_dynarray_size\n");}
-int pa_dynarray_steal_last(){ printf("pa_dynarray_steal_last\n");}
-int pa_encoding_from_string(){ printf("pa_encoding_from_string\n");}
-int pa_encoding_to_string(){ printf("pa_encoding_to_string\n");}
-int pa_endswith(){ printf("pa_endswith\n");}
-int pa_escape(){ printf("pa_escape\n");}
-int pa_ext_device_manager_delete(){ printf("pa_ext_device_manager_delete\n");}
-int pa_ext_device_manager_enable_role_device_priority_routing(){ printf("pa_ext_device_manager_enable_role_device_priority_routing\n");}
-int pa_ext_device_manager_read(){ printf("pa_ext_device_manager_read\n");}
-int pa_ext_device_manager_reorder_devices_for_role(){ printf("pa_ext_device_manager_reorder_devices_for_role\n");}
-int pa_ext_device_manager_set_device_description(){ printf("pa_ext_device_manager_set_device_description\n");}
-int pa_ext_device_manager_set_subscribe_cb(){ printf("pa_ext_device_manager_set_subscribe_cb\n");}
-int pa_ext_device_manager_subscribe(){ printf("pa_ext_device_manager_subscribe\n");}
-int pa_ext_device_manager_test(){ printf("pa_ext_device_manager_test\n");}
-int pa_ext_device_restore_read_formats(){ printf("pa_ext_device_restore_read_formats\n");}
-int pa_ext_device_restore_read_formats_all(){ printf("pa_ext_device_restore_read_formats_all\n");}
-int pa_ext_device_restore_save_formats(){ printf("pa_ext_device_restore_save_formats\n");}
-int pa_ext_device_restore_set_subscribe_cb(){ printf("pa_ext_device_restore_set_subscribe_cb\n");}
-int pa_ext_device_restore_subscribe(){ printf("pa_ext_device_restore_subscribe\n");}
-int pa_ext_device_restore_test(){ printf("pa_ext_device_restore_test\n");}
-int pa_ext_stream_restore_delete(){ printf("pa_ext_stream_restore_delete\n");}
-int pa_ext_stream_restore_read(){ printf("pa_ext_stream_restore_read\n");}
-int pa_ext_stream_restore_set_subscribe_cb(){ printf("pa_ext_stream_restore_set_subscribe_cb\n");}
-int pa_ext_stream_restore_subscribe(){ printf("pa_ext_stream_restore_subscribe\n");}
-int pa_ext_stream_restore_test(){ printf("pa_ext_stream_restore_test\n");}
-int pa_ext_stream_restore_write(){ printf("pa_ext_stream_restore_write\n");}
-int pa_find_config_file(){ printf("pa_find_config_file\n");}
-int pa_flist_free(){ printf("pa_flist_free\n");}
-int pa_flist_new(){ printf("pa_flist_new\n");}
-int pa_flist_new_with_name(){ printf("pa_flist_new_with_name\n");}
-int pa_flist_pop(){ printf("pa_flist_pop\n");}
-int pa_flist_push(){ printf("pa_flist_push\n");}
-int pa_fopen_cloexec(){ printf("pa_fopen_cloexec\n");}
-int pa_format_info_copy(){ printf("pa_format_info_copy\n");}
-int pa_format_info_free(){ printf("pa_format_info_free\n");}
-int pa_format_info_free_string_array(){ printf("pa_format_info_free_string_array\n");}
-int pa_format_info_from_sample_spec(){ printf("pa_format_info_from_sample_spec\n");}
-int pa_format_info_from_sample_spec2(){ printf("pa_format_info_from_sample_spec2\n");}
-int pa_format_info_from_string(){ printf("pa_format_info_from_string\n");}
-int pa_format_info_get_channel_map(){ printf("pa_format_info_get_channel_map\n");}
-int pa_format_info_get_channels(){ printf("pa_format_info_get_channels\n");}
-int pa_format_info_get_prop_int(){ printf("pa_format_info_get_prop_int\n");}
-int pa_format_info_get_prop_int_array(){ printf("pa_format_info_get_prop_int_array\n");}
-int pa_format_info_get_prop_int_range(){ printf("pa_format_info_get_prop_int_range\n");}
-int pa_format_info_get_prop_string(){ printf("pa_format_info_get_prop_string\n");}
-int pa_format_info_get_prop_string_array(){ printf("pa_format_info_get_prop_string_array\n");}
-int pa_format_info_get_prop_type(){ printf("pa_format_info_get_prop_type\n");}
-int pa_format_info_get_rate(){ printf("pa_format_info_get_rate\n");}
-int pa_format_info_get_sample_format(){ printf("pa_format_info_get_sample_format\n");}
-int pa_format_info_is_compatible(){ printf("pa_format_info_is_compatible\n");}
-int pa_format_info_is_pcm(){ printf("pa_format_info_is_pcm\n");}
-int pa_format_info_new(){ printf("pa_format_info_new\n");}
-int pa_format_info_set_channel_map(){ printf("pa_format_info_set_channel_map\n");}
-int pa_format_info_set_channels(){ printf("pa_format_info_set_channels\n");}
-int pa_format_info_set_prop_int(){ printf("pa_format_info_set_prop_int\n");}
-int pa_format_info_set_prop_int_array(){ printf("pa_format_info_set_prop_int_array\n");}
-int pa_format_info_set_prop_int_range(){ printf("pa_format_info_set_prop_int_range\n");}
-int pa_format_info_set_prop_string(){ printf("pa_format_info_set_prop_string\n");}
-int pa_format_info_set_prop_string_array(){ printf("pa_format_info_set_prop_string_array\n");}
-int pa_format_info_set_rate(){ printf("pa_format_info_set_rate\n");}
-int pa_format_info_set_sample_format(){ printf("pa_format_info_set_sample_format\n");}
-int pa_format_info_snprint(){ printf("pa_format_info_snprint\n");}
-int pa_format_info_to_sample_spec(){ printf("pa_format_info_to_sample_spec\n");}
-int pa_format_info_to_sample_spec2(){ printf("pa_format_info_to_sample_spec2\n");}
-int pa_format_info_to_sample_spec_fake(){ printf("pa_format_info_to_sample_spec_fake\n");}
-int pa_format_info_valid(){ printf("pa_format_info_valid\n");}
-int pa_frame_align(){ printf("pa_frame_align\n");}
-int pa_frame_aligned(){ printf("pa_frame_aligned\n");}
-/*int pa_frame_size(){ printf("pa_frame_size\n");}*/
-int pa_gcd(){ printf("pa_gcd\n");}
-int pa_get_binary_name(){ printf("pa_get_binary_name\n");}
-int pa_get_binary_name_malloc(){ printf("pa_get_binary_name_malloc\n");}
-int pa_get_fqdn(){ printf("pa_get_fqdn\n");}
-int pa_get_gid_of_group(){ printf("pa_get_gid_of_group\n");}
-int pa_get_home_dir(){ printf("pa_get_home_dir\n");}
-int pa_get_home_dir_malloc(){ printf("pa_get_home_dir_malloc\n");}
-int pa_get_host_name(){ printf("pa_get_host_name\n");}
-int pa_get_host_name_malloc(){ printf("pa_get_host_name_malloc\n");}
-/* int pa_get_library_version(){ printf("pa_get_library_version\n");} */
-int pa_get_runtime_dir(){ printf("pa_get_runtime_dir\n");}
-int pa_get_state_dir(){ printf("pa_get_state_dir\n");}
-int pa_get_temp_dir(){ printf("pa_get_temp_dir\n");}
-int pa_get_user_name(){ printf("pa_get_user_name\n");}
-int pa_get_user_name_malloc(){ printf("pa_get_user_name_malloc\n");}
-int pa_get_volume_func(){ printf("pa_get_volume_func\n");}
-int pa_getcwd(){ printf("pa_getcwd\n");}
-int pa_getgrgid_free(){ printf("pa_getgrgid_free\n");}
-int pa_getgrgid_malloc(){ printf("pa_getgrgid_malloc\n");}
-int pa_getgrnam_free(){ printf("pa_getgrnam_free\n");}
-int pa_getgrnam_malloc(){ printf("pa_getgrnam_malloc\n");}
-int pa_getpwnam_free(){ printf("pa_getpwnam_free\n");}
-int pa_getpwnam_malloc(){ printf("pa_getpwnam_malloc\n");}
-int pa_getpwuid_free(){ printf("pa_getpwuid_free\n");}
-int pa_getpwuid_malloc(){ printf("pa_getpwuid_malloc\n");}
-int pa_gettimeofday(){ printf("pa_gettimeofday\n");}
-int pa_hashmap_first(){ printf("pa_hashmap_first\n");}
-int pa_hashmap_free(){ printf("pa_hashmap_free\n");}
-int pa_hashmap_get(){ printf("pa_hashmap_get\n");}
-int pa_hashmap_isempty(){ printf("pa_hashmap_isempty\n");}
-int pa_hashmap_iterate(){ printf("pa_hashmap_iterate\n");}
-int pa_hashmap_iterate_backwards(){ printf("pa_hashmap_iterate_backwards\n");}
-int pa_hashmap_last(){ printf("pa_hashmap_last\n");}
-int pa_hashmap_new(){ printf("pa_hashmap_new\n");}
-int pa_hashmap_new_full(){ printf("pa_hashmap_new_full\n");}
-int pa_hashmap_put(){ printf("pa_hashmap_put\n");}
-int pa_hashmap_remove(){ printf("pa_hashmap_remove\n");}
-int pa_hashmap_remove_all(){ printf("pa_hashmap_remove_all\n");}
-int pa_hashmap_size(){ printf("pa_hashmap_size\n");}
-int pa_hashmap_steal_first(){ printf("pa_hashmap_steal_first\n");}
-int pa_hexstr(){ printf("pa_hexstr\n");}
-int pa_idxset_copy(){ printf("pa_idxset_copy\n");}
-int pa_idxset_first(){ printf("pa_idxset_first\n");}
-int pa_idxset_free(){ printf("pa_idxset_free\n");}
-int pa_idxset_get_by_data(){ printf("pa_idxset_get_by_data\n");}
-int pa_idxset_get_by_index(){ printf("pa_idxset_get_by_index\n");}
-int pa_idxset_isempty(){ printf("pa_idxset_isempty\n");}
-int pa_idxset_iterate(){ printf("pa_idxset_iterate\n");}
-int pa_idxset_new(){ printf("pa_idxset_new\n");}
-int pa_idxset_next(){ printf("pa_idxset_next\n");}
-int pa_idxset_put(){ printf("pa_idxset_put\n");}
-int pa_idxset_remove_all(){ printf("pa_idxset_remove_all\n");}
-int pa_idxset_remove_by_data(){ printf("pa_idxset_remove_by_data\n");}
-int pa_idxset_remove_by_index(){ printf("pa_idxset_remove_by_index\n");}
-int pa_idxset_rrobin(){ printf("pa_idxset_rrobin\n");}
-int pa_idxset_size(){ printf("pa_idxset_size\n");}
-int pa_idxset_steal_first(){ printf("pa_idxset_steal_first\n");}
-int pa_idxset_string_compare_func(){ printf("pa_idxset_string_compare_func\n");}
-int pa_idxset_string_hash_func(){ printf("pa_idxset_string_hash_func\n");}
-int pa_idxset_trivial_compare_func(){ printf("pa_idxset_trivial_compare_func\n");}
-int pa_idxset_trivial_hash_func(){ printf("pa_idxset_trivial_hash_func\n");}
-int pa_in_system_mode(){ printf("pa_in_system_mode\n");}
-/*int pa_init_i18n(){ printf("pa_init_i18n\n");} */
-int pa_init_proplist(){ printf("pa_init_proplist\n");}
-int pa_interleave(){ printf("pa_interleave\n");}
-int pa_iochannel_creds_enable(){ printf("pa_iochannel_creds_enable\n");}
-int pa_iochannel_creds_supported(){ printf("pa_iochannel_creds_supported\n");}
-int pa_iochannel_free(){ printf("pa_iochannel_free\n");}
-int pa_iochannel_get_mainloop_api(){ printf("pa_iochannel_get_mainloop_api\n");}
-int pa_iochannel_get_recv_fd(){ printf("pa_iochannel_get_recv_fd\n");}
-int pa_iochannel_get_send_fd(){ printf("pa_iochannel_get_send_fd\n");}
-int pa_iochannel_is_hungup(){ printf("pa_iochannel_is_hungup\n");}
-int pa_iochannel_is_readable(){ printf("pa_iochannel_is_readable\n");}
-int pa_iochannel_is_writable(){ printf("pa_iochannel_is_writable\n");}
-int pa_iochannel_new(){ printf("pa_iochannel_new\n");}
-int pa_iochannel_read(){ printf("pa_iochannel_read\n");}
-int pa_iochannel_read_with_creds(){ printf("pa_iochannel_read_with_creds\n");}
-int pa_iochannel_set_callback(){ printf("pa_iochannel_set_callback\n");}
-int pa_iochannel_set_noclose(){ printf("pa_iochannel_set_noclose\n");}
-int pa_iochannel_socket_is_local(){ printf("pa_iochannel_socket_is_local\n");}
-int pa_iochannel_socket_peer_to_string(){ printf("pa_iochannel_socket_peer_to_string\n");}
-int pa_iochannel_socket_set_rcvbuf(){ printf("pa_iochannel_socket_set_rcvbuf\n");}
-int pa_iochannel_socket_set_sndbuf(){ printf("pa_iochannel_socket_set_sndbuf\n");}
-int pa_iochannel_write(){ printf("pa_iochannel_write\n");}
-int pa_iochannel_write_with_creds(){ printf("pa_iochannel_write_with_creds\n");}
-int pa_ioline_close(){ printf("pa_ioline_close\n");}
-int pa_ioline_defer_close(){ printf("pa_ioline_defer_close\n");}
-int pa_ioline_detach_iochannel(){ printf("pa_ioline_detach_iochannel\n");}
-int pa_ioline_is_drained(){ printf("pa_ioline_is_drained\n");}
-int pa_ioline_new(){ printf("pa_ioline_new\n");}
-int pa_ioline_printf(){ printf("pa_ioline_printf\n");}
-int pa_ioline_puts(){ printf("pa_ioline_puts\n");}
-int pa_ioline_ref(){ printf("pa_ioline_ref\n");}
-int pa_ioline_set_callback(){ printf("pa_ioline_set_callback\n");}
-int pa_ioline_set_drain_callback(){ printf("pa_ioline_set_drain_callback\n");}
-int pa_ioline_unref(){ printf("pa_ioline_unref\n");}
-int pa_ip_acl_check(){ printf("pa_ip_acl_check\n");}
-int pa_ip_acl_free(){ printf("pa_ip_acl_free\n");}
-int pa_ip_acl_new(){ printf("pa_ip_acl_new\n");}
-int pa_is_fd_nonblock(){ printf("pa_is_fd_nonblock\n");}
-int pa_is_ip_address(){ printf("pa_is_ip_address\n");}
-int pa_is_path_absolute(){ printf("pa_is_path_absolute\n");}
-int pa_locale_to_utf8(){ printf("pa_locale_to_utf8\n");}
-int pa_lock_fd(){ printf("pa_lock_fd\n");}
-int pa_lock_lockfile(){ printf("pa_lock_lockfile\n");}
-int pa_log_level(){ printf("pa_log_level\n");}
-int pa_log_level_meta(){ printf("pa_log_level_meta\n");}
-int pa_log_levelv(){ printf("pa_log_levelv\n");}
-int pa_log_levelv_meta(){ printf("pa_log_levelv_meta\n");}
-int pa_log_parse_target(){ printf("pa_log_parse_target\n");}
-int pa_log_ratelimit(){ printf("pa_log_ratelimit\n");}
-int pa_log_set_flags(){ printf("pa_log_set_flags\n");}
-int pa_log_set_ident(){ printf("pa_log_set_ident\n");}
-int pa_log_set_level(){ printf("pa_log_set_level\n");}
-int pa_log_set_show_backtrace(){ printf("pa_log_set_show_backtrace\n");}
-int pa_log_set_skip_backtrace(){ printf("pa_log_set_skip_backtrace\n");}
-int pa_log_set_target(){ printf("pa_log_set_target\n");}
-int pa_log_target_free(){ printf("pa_log_target_free\n");}
-int pa_log_target_new(){ printf("pa_log_target_new\n");}
-int pa_log_target_to_string(){ printf("pa_log_target_to_string\n");}
-int pa_loop_read(){ printf("pa_loop_read\n");}
-int pa_loop_write(){ printf("pa_loop_write\n");}
-int pa_machine_id(){ printf("pa_machine_id\n");}
-int pa_mainloop_api_once(){ printf("pa_mainloop_api_once\n");}
-int pa_mainloop_dispatch(){ printf("pa_mainloop_dispatch\n");}
-int pa_mainloop_free(){ printf("pa_mainloop_free\n");}
-int pa_mainloop_get_api(){ printf("pa_mainloop_get_api\n");}
-int pa_mainloop_get_retval(){ printf("pa_mainloop_get_retval\n");}
-int pa_mainloop_iterate(){ printf("pa_mainloop_iterate\n");}
-int pa_mainloop_new(){ printf("pa_mainloop_new\n");}
-int pa_mainloop_poll(){ printf("pa_mainloop_poll\n");}
-int pa_mainloop_prepare(){ printf("pa_mainloop_prepare\n");}
-int pa_mainloop_quit(){ printf("pa_mainloop_quit\n");}
-int pa_mainloop_run(){ printf("pa_mainloop_run\n");}
-int pa_mainloop_set_poll_func(){ printf("pa_mainloop_set_poll_func\n");}
-int pa_mainloop_wakeup(){ printf("pa_mainloop_wakeup\n");}
-int pa_make_fd_block(){ printf("pa_make_fd_block\n");}
-int pa_make_fd_cloexec(){ printf("pa_make_fd_cloexec\n");}
-int pa_make_fd_nonblock(){ printf("pa_make_fd_nonblock\n");}
-int pa_make_path_absolute(){ printf("pa_make_path_absolute\n");}
-int pa_make_realtime(){ printf("pa_make_realtime\n");}
-int pa_make_secure_dir(){ printf("pa_make_secure_dir\n");}
-int pa_make_secure_parent_dir(){ printf("pa_make_secure_parent_dir\n");}
-int pa_make_socket_low_delay(){ printf("pa_make_socket_low_delay\n");}
-int pa_make_tcp_socket_low_delay(){ printf("pa_make_tcp_socket_low_delay\n");}
-int pa_make_udp_socket_low_delay(){ printf("pa_make_udp_socket_low_delay\n");}
-int pa_match(){ printf("pa_match\n");}
-int pa_maybe_prefix_path(){ printf("pa_maybe_prefix_path\n");}
-int pa_mcalign_csize(){ printf("pa_mcalign_csize\n");}
-int pa_mcalign_flush(){ printf("pa_mcalign_flush\n");}
-int pa_mcalign_free(){ printf("pa_mcalign_free\n");}
-int pa_mcalign_new(){ printf("pa_mcalign_new\n");}
-int pa_mcalign_pop(){ printf("pa_mcalign_pop\n");}
-int pa_mcalign_push(){ printf("pa_mcalign_push\n");}
-int pa_memblock_acquire(){ printf("pa_memblock_acquire\n");}
-int pa_memblock_acquire_chunk(){ printf("pa_memblock_acquire_chunk\n");}
-int pa_memblock_get_length(){ printf("pa_memblock_get_length\n");}
-int pa_memblock_get_pool(){ printf("pa_memblock_get_pool\n");}
-int pa_memblock_is_read_only(){ printf("pa_memblock_is_read_only\n");}
-int pa_memblock_is_silence(){ printf("pa_memblock_is_silence\n");}
-int pa_memblock_new(){ printf("pa_memblock_new\n");}
-int pa_memblock_new_fixed(){ printf("pa_memblock_new_fixed\n");}
-int pa_memblock_new_pool(){ printf("pa_memblock_new_pool\n");}
-int pa_memblock_new_user(){ printf("pa_memblock_new_user\n");}
-int pa_memblock_ref(){ printf("pa_memblock_ref\n");}
-int pa_memblock_ref_is_one(){ printf("pa_memblock_ref_is_one\n");}
-int pa_memblock_release(){ printf("pa_memblock_release\n");}
-int pa_memblock_set_is_silence(){ printf("pa_memblock_set_is_silence\n");}
-int pa_memblock_unref(){ printf("pa_memblock_unref\n");}
-int pa_memblock_unref_fixed(){ printf("pa_memblock_unref_fixed\n");}
-int pa_memblock_will_need(){ printf("pa_memblock_will_need\n");}
-int pa_memblockq_apply_attr(){ printf("pa_memblockq_apply_attr\n");}
-int pa_memblockq_drop(){ printf("pa_memblockq_drop\n");}
-int pa_memblockq_flush_read(){ printf("pa_memblockq_flush_read\n");}
-int pa_memblockq_flush_write(){ printf("pa_memblockq_flush_write\n");}
-int pa_memblockq_free(){ printf("pa_memblockq_free\n");}
-int pa_memblockq_get_attr(){ printf("pa_memblockq_get_attr\n");}
-int pa_memblockq_get_base(){ printf("pa_memblockq_get_base\n");}
-int pa_memblockq_get_length(){ printf("pa_memblockq_get_length\n");}
-int pa_memblockq_get_maxlength(){ printf("pa_memblockq_get_maxlength\n");}
-int pa_memblockq_get_maxrewind(){ printf("pa_memblockq_get_maxrewind\n");}
-int pa_memblockq_get_minreq(){ printf("pa_memblockq_get_minreq\n");}
-int pa_memblockq_get_nblocks(){ printf("pa_memblockq_get_nblocks\n");}
-int pa_memblockq_get_prebuf(){ printf("pa_memblockq_get_prebuf\n");}
-int pa_memblockq_get_read_index(){ printf("pa_memblockq_get_read_index\n");}
-int pa_memblockq_get_tlength(){ printf("pa_memblockq_get_tlength\n");}
-int pa_memblockq_get_write_index(){ printf("pa_memblockq_get_write_index\n");}
-int pa_memblockq_is_empty(){ printf("pa_memblockq_is_empty\n");}
-int pa_memblockq_is_readable(){ printf("pa_memblockq_is_readable\n");}
-int pa_memblockq_missing(){ printf("pa_memblockq_missing\n");}
-int pa_memblockq_new(){ printf("pa_memblockq_new\n");}
-int pa_memblockq_peek(){ printf("pa_memblockq_peek\n");}
-int pa_memblockq_peek_fixed_size(){ printf("pa_memblockq_peek_fixed_size\n");}
-int pa_memblockq_pop_missing(){ printf("pa_memblockq_pop_missing\n");}
-int pa_memblockq_prebuf_active(){ printf("pa_memblockq_prebuf_active\n");}
-int pa_memblockq_prebuf_disable(){ printf("pa_memblockq_prebuf_disable\n");}
-int pa_memblockq_prebuf_force(){ printf("pa_memblockq_prebuf_force\n");}
-int pa_memblockq_push(){ printf("pa_memblockq_push\n");}
-int pa_memblockq_push_align(){ printf("pa_memblockq_push_align\n");}
-int pa_memblockq_rewind(){ printf("pa_memblockq_rewind\n");}
-int pa_memblockq_seek(){ printf("pa_memblockq_seek\n");}
-int pa_memblockq_set_maxlength(){ printf("pa_memblockq_set_maxlength\n");}
-int pa_memblockq_set_maxrewind(){ printf("pa_memblockq_set_maxrewind\n");}
-int pa_memblockq_set_minreq(){ printf("pa_memblockq_set_minreq\n");}
-int pa_memblockq_set_prebuf(){ printf("pa_memblockq_set_prebuf\n");}
-int pa_memblockq_set_silence(){ printf("pa_memblockq_set_silence\n");}
-int pa_memblockq_set_tlength(){ printf("pa_memblockq_set_tlength\n");}
-int pa_memblockq_silence(){ printf("pa_memblockq_silence\n");}
-int pa_memblockq_splice(){ printf("pa_memblockq_splice\n");}
-int pa_memblockq_willneed(){ printf("pa_memblockq_willneed\n");}
-int pa_memchunk_dump_to_file(){ printf("pa_memchunk_dump_to_file\n");}
-int pa_memchunk_isset(){ printf("pa_memchunk_isset\n");}
-int pa_memchunk_make_writable(){ printf("pa_memchunk_make_writable\n");}
-int pa_memchunk_memcpy(){ printf("pa_memchunk_memcpy\n");}
-int pa_memchunk_reset(){ printf("pa_memchunk_reset\n");}
-int pa_memchunk_sine(){ printf("pa_memchunk_sine\n");}
-int pa_memchunk_will_need(){ printf("pa_memchunk_will_need\n");}
-int pa_memexport_free(){ printf("pa_memexport_free\n");}
-int pa_memexport_new(){ printf("pa_memexport_new\n");}
-int pa_memexport_process_release(){ printf("pa_memexport_process_release\n");}
-int pa_memexport_put(){ printf("pa_memexport_put\n");}
-int pa_memimport_free(){ printf("pa_memimport_free\n");}
-int pa_memimport_get(){ printf("pa_memimport_get\n");}
-int pa_memimport_new(){ printf("pa_memimport_new\n");}
-int pa_memimport_process_revoke(){ printf("pa_memimport_process_revoke\n");}
-int pa_mempool_block_size_max(){ printf("pa_mempool_block_size_max\n");}
-int pa_mempool_free(){ printf("pa_mempool_free\n");}
-int pa_mempool_get_shm_id(){ printf("pa_mempool_get_shm_id\n");}
-int pa_mempool_get_stat(){ printf("pa_mempool_get_stat\n");}
-int pa_mempool_is_shared(){ printf("pa_mempool_is_shared\n");}
-int pa_mempool_new(){ printf("pa_mempool_new\n");}
-int pa_mempool_vacuum(){ printf("pa_mempool_vacuum\n");}
-int pa_memtrap_add(){ printf("pa_memtrap_add\n");}
-int pa_memtrap_install(){ printf("pa_memtrap_install\n");}
-int pa_memtrap_is_good(){ printf("pa_memtrap_is_good\n");}
-int pa_memtrap_remove(){ printf("pa_memtrap_remove\n");}
-int pa_memtrap_update(){ printf("pa_memtrap_update\n");}
-int pa_msleep(){ printf("pa_msleep\n");}
-int pa_mutex_free(){ printf("pa_mutex_free\n");}
-int pa_mutex_lock(){ printf("pa_mutex_lock\n");}
-int pa_mutex_new(){ printf("pa_mutex_new\n");}
-int pa_mutex_try_lock(){ printf("pa_mutex_try_lock\n");}
-int pa_mutex_unlock(){ printf("pa_mutex_unlock\n");}
-int pa_ncpus(){ printf("pa_ncpus\n");}
-int pa_nullify_stdfds(){ printf("pa_nullify_stdfds\n");}
-int pa_once_begin(){ printf("pa_once_begin\n");}
-int pa_once_end(){ printf("pa_once_end\n");}
-int pa_open_cloexec(){ printf("pa_open_cloexec\n");}
-int pa_open_config_file(){ printf("pa_open_config_file\n");}
-int pa_operation_cancel(){ printf("pa_operation_cancel\n");}
-/*int pa_operation_get_state(){ printf("pa_operation_get_state\n");}*/
-int pa_operation_ref(){ printf("pa_operation_ref\n");}
-int pa_operation_set_state_callback(){ printf("pa_operation_set_state_callback\n");}
-/*int pa_operation_unref(){ printf("pa_operation_unref\n");}*/
-int pa_own_uid_in_group(){ printf("pa_own_uid_in_group\n");}
-int pa_packet_new(){ printf("pa_packet_new\n");}
-int pa_packet_new_dynamic(){ printf("pa_packet_new_dynamic\n");}
-int pa_packet_ref(){ printf("pa_packet_ref\n");}
-int pa_packet_unref(){ printf("pa_packet_unref\n");}
-int pa_parent_dir(){ printf("pa_parent_dir\n");}
-int pa_parse_address(){ printf("pa_parse_address\n");}
-int pa_parse_boolean(){ printf("pa_parse_boolean\n");}
-int pa_parse_sample_format(){ printf("pa_parse_sample_format\n");}
-int pa_parse_volume(){ printf("pa_parse_volume\n");}
-int pa_parsehex(){ printf("pa_parsehex\n");}
-int pa_path_get_filename(){ printf("pa_path_get_filename\n");}
-int pa_pdispatch_creds(){ printf("pa_pdispatch_creds\n");}
-int pa_pdispatch_is_pending(){ printf("pa_pdispatch_is_pending\n");}
-int pa_pdispatch_new(){ printf("pa_pdispatch_new\n");}
-int pa_pdispatch_ref(){ printf("pa_pdispatch_ref\n");}
-int pa_pdispatch_register_reply(){ printf("pa_pdispatch_register_reply\n");}
-int pa_pdispatch_run(){ printf("pa_pdispatch_run\n");}
-int pa_pdispatch_set_drain_callback(){ printf("pa_pdispatch_set_drain_callback\n");}
-int pa_pdispatch_unref(){ printf("pa_pdispatch_unref\n");}
-int pa_pdispatch_unregister_reply(){ printf("pa_pdispatch_unregister_reply\n");}
-int pa_pid_file_check_running(){ printf("pa_pid_file_check_running\n");}
-int pa_pid_file_create(){ printf("pa_pid_file_create\n");}
-int pa_pid_file_kill(){ printf("pa_pid_file_kill\n");}
-int pa_pid_file_remove(){ printf("pa_pid_file_remove\n");}
-int pa_pipe_buf(){ printf("pa_pipe_buf\n");}
-int pa_pipe_cloexec(){ printf("pa_pipe_cloexec\n");}
-int pa_proplist_clear(){ printf("pa_proplist_clear\n");}
-int pa_proplist_contains(){ printf("pa_proplist_contains\n");}
-int pa_proplist_copy(){ printf("pa_proplist_copy\n");}
-int pa_proplist_equal(){ printf("pa_proplist_equal\n");}
-int pa_proplist_free(){ printf("pa_proplist_free\n");}
-int pa_proplist_from_string(){ printf("pa_proplist_from_string\n");}
-int pa_proplist_get(){ printf("pa_proplist_get\n");}
-int pa_proplist_get_stream_group(){ printf("pa_proplist_get_stream_group\n");}
-int pa_proplist_gets(){ printf("pa_proplist_gets\n");}
-int pa_proplist_isempty(){ printf("pa_proplist_isempty\n");}
-int pa_proplist_iterate(){ printf("pa_proplist_iterate\n");}
-int pa_proplist_key_valid(){ printf("pa_proplist_key_valid\n");}
-int pa_proplist_new(){ printf("pa_proplist_new\n");}
-int pa_proplist_set(){ printf("pa_proplist_set\n");}
-int pa_proplist_setf(){ printf("pa_proplist_setf\n");}
-int pa_proplist_setp(){ printf("pa_proplist_setp\n");}
-int pa_proplist_sets(){ printf("pa_proplist_sets\n");}
-int pa_proplist_size(){ printf("pa_proplist_size\n");}
-int pa_proplist_to_string(){ printf("pa_proplist_to_string\n");}
-int pa_proplist_to_string_sep(){ printf("pa_proplist_to_string_sep\n");}
-int pa_proplist_unset(){ printf("pa_proplist_unset\n");}
-int pa_proplist_unset_many(){ printf("pa_proplist_unset_many\n");}
-int pa_proplist_update(){ printf("pa_proplist_update\n");}
-int pa_pstream_enable_shm(){ printf("pa_pstream_enable_shm\n");}
-int pa_pstream_get_shm(){ printf("pa_pstream_get_shm\n");}
-int pa_pstream_is_pending(){ printf("pa_pstream_is_pending\n");}
-int pa_pstream_new(){ printf("pa_pstream_new\n");}
-int pa_pstream_ref(){ printf("pa_pstream_ref\n");}
-int pa_pstream_send_error(){ printf("pa_pstream_send_error\n");}
-int pa_pstream_send_memblock(){ printf("pa_pstream_send_memblock\n");}
-int pa_pstream_send_packet(){ printf("pa_pstream_send_packet\n");}
-int pa_pstream_send_release(){ printf("pa_pstream_send_release\n");}
-int pa_pstream_send_revoke(){ printf("pa_pstream_send_revoke\n");}
-int pa_pstream_send_simple_ack(){ printf("pa_pstream_send_simple_ack\n");}
-int pa_pstream_send_tagstruct_with_creds(){ printf("pa_pstream_send_tagstruct_with_creds\n");}
-int pa_pstream_set_die_callback(){ printf("pa_pstream_set_die_callback\n");}
-int pa_pstream_set_drain_callback(){ printf("pa_pstream_set_drain_callback\n");}
-int pa_pstream_set_receive_memblock_callback(){ printf("pa_pstream_set_receive_memblock_callback\n");}
-int pa_pstream_set_receive_packet_callback(){ printf("pa_pstream_set_receive_packet_callback\n");}
-int pa_pstream_set_release_callback(){ printf("pa_pstream_set_release_callback\n");}
-int pa_pstream_set_revoke_callback(){ printf("pa_pstream_set_revoke_callback\n");}
-int pa_pstream_unlink(){ printf("pa_pstream_unlink\n");}
-int pa_pstream_unref(){ printf("pa_pstream_unref\n");}
-int pa_queue_free(){ printf("pa_queue_free\n");}
-int pa_queue_isempty(){ printf("pa_queue_isempty\n");}
-int pa_queue_new(){ printf("pa_queue_new\n");}
-int pa_queue_pop(){ printf("pa_queue_pop\n");}
-int pa_queue_push(){ printf("pa_queue_push\n");}
-int pa_raise_priority(){ printf("pa_raise_priority\n");}
-int pa_random(){ printf("pa_random\n");}
-int pa_random_seed(){ printf("pa_random_seed\n");}
-int pa_ratelimit_test(){ printf("pa_ratelimit_test\n");}
-int pa_read(){ printf("pa_read\n");}
-int pa_read_line_from_file(){ printf("pa_read_line_from_file\n");}
-int pa_readlink(){ printf("pa_readlink\n");}
-int pa_realpath(){ printf("pa_realpath\n");}
-int pa_reduce(){ printf("pa_reduce\n");}
-int pa_replace(){ printf("pa_replace\n");}
-int pa_reset_personality(){ printf("pa_reset_personality\n");}
-int pa_reset_priority(){ printf("pa_reset_priority\n");}
-int pa_reset_sigs(){ printf("pa_reset_sigs\n");}
-int pa_reset_sigsv(){ printf("pa_reset_sigsv\n");}
-int pa_rtclock_age(){ printf("pa_rtclock_age\n");}
-int pa_rtclock_from_wallclock(){ printf("pa_rtclock_from_wallclock\n");}
-int pa_rtclock_get(){ printf("pa_rtclock_get\n");}
-int pa_rtclock_hrtimer(){ printf("pa_rtclock_hrtimer\n");}
-int pa_rtclock_hrtimer_enable(){ printf("pa_rtclock_hrtimer_enable\n");}
-int pa_rtclock_now(){ printf("pa_rtclock_now\n");}
-int pa_run_from_build_tree(){ printf("pa_run_from_build_tree\n");}
-int pa_run_once(){ printf("pa_run_once\n");}
-int pa_running_in_vm(){ printf("pa_running_in_vm\n");}
-int pa_runtime_path(){ printf("pa_runtime_path\n");}
-int pa_sample_clamp(){ printf("pa_sample_clamp\n");}
-int pa_sample_format_is_be(){ printf("pa_sample_format_is_be\n");}
-int pa_sample_format_is_le(){ printf("pa_sample_format_is_le\n");}
-/*int pa_sample_format_to_string(){ printf("pa_sample_format_to_string\n");}*/
-int pa_sample_format_valid(){ printf("pa_sample_format_valid\n");}
-int pa_sample_rate_valid(){ printf("pa_sample_rate_valid\n");}
-int pa_sample_size(){ printf("pa_sample_size\n");}
-int pa_sample_size_of_format(){ printf("pa_sample_size_of_format\n");}
-int pa_sample_spec_equal(){ printf("pa_sample_spec_equal\n");}
-int pa_sample_spec_init(){ printf("pa_sample_spec_init\n");}
-/*int pa_sample_spec_snprint(){ printf("pa_sample_spec_snprint\n");}*/
-/*int pa_sample_spec_valid(){ printf("pa_sample_spec_valid\n");}*/
-int pa_semaphore_free(){ printf("pa_semaphore_free\n");}
-int pa_semaphore_new(){ printf("pa_semaphore_new\n");}
-int pa_semaphore_post(){ printf("pa_semaphore_post\n");}
-int pa_semaphore_wait(){ printf("pa_semaphore_wait\n");}
-int pa_session_id(){ printf("pa_session_id\n");}
-int pa_set_env(){ printf("pa_set_env\n");}
-int pa_set_env_and_record(){ printf("pa_set_env_and_record\n");}
-int pa_set_volume_func(){ printf("pa_set_volume_func\n");}
-int pa_shm_attach_ro(){ printf("pa_shm_attach_ro\n");}
-int pa_shm_cleanup(){ printf("pa_shm_cleanup\n");}
-int pa_shm_create_rw(){ printf("pa_shm_create_rw\n");}
-int pa_shm_free(){ printf("pa_shm_free\n");}
-int pa_shm_punch(){ printf("pa_shm_punch\n");}
-int pa_sig2str(){ printf("pa_sig2str\n");}
-int pa_signal_done(){ printf("pa_signal_done\n");}
-int pa_signal_free(){ printf("pa_signal_free\n");}
-int pa_signal_init(){ printf("pa_signal_init\n");}
-int pa_signal_new(){ printf("pa_signal_new\n");}
-int pa_signal_set_destroy(){ printf("pa_signal_set_destroy\n");}
-int pa_silence_cache_done(){ printf("pa_silence_cache_done\n");}
-int pa_silence_cache_init(){ printf("pa_silence_cache_init\n");}
-int pa_silence_memblock(){ printf("pa_silence_memblock\n");}
-int pa_silence_memchunk(){ printf("pa_silence_memchunk\n");}
-int pa_silence_memchunk_get(){ printf("pa_silence_memchunk_get\n");}
-int pa_silence_memory(){ printf("pa_silence_memory\n");}
-int pa_smoother_fix_now(){ printf("pa_smoother_fix_now\n");}
-int pa_smoother_free(){ printf("pa_smoother_free\n");}
-int pa_smoother_get(){ printf("pa_smoother_get\n");}
-int pa_smoother_new(){ printf("pa_smoother_new\n");}
-int pa_smoother_pause(){ printf("pa_smoother_pause\n");}
-int pa_smoother_put(){ printf("pa_smoother_put\n");}
-int pa_smoother_reset(){ printf("pa_smoother_reset\n");}
-int pa_smoother_resume(){ printf("pa_smoother_resume\n");}
-int pa_smoother_set_time_offset(){ printf("pa_smoother_set_time_offset\n");}
-int pa_smoother_translate(){ printf("pa_smoother_translate\n");}
-int pa_sndfile_dump_formats(){ printf("pa_sndfile_dump_formats\n");}
-int pa_sndfile_format_from_string(){ printf("pa_sndfile_format_from_string\n");}
-int pa_sndfile_init_proplist(){ printf("pa_sndfile_init_proplist\n");}
-int pa_sndfile_read_channel_map(){ printf("pa_sndfile_read_channel_map\n");}
-int pa_sndfile_read_sample_spec(){ printf("pa_sndfile_read_sample_spec\n");}
-int pa_sndfile_readf_function(){ printf("pa_sndfile_readf_function\n");}
-int pa_sndfile_write_channel_map(){ printf("pa_sndfile_write_channel_map\n");}
-int pa_sndfile_write_sample_spec(){ printf("pa_sndfile_write_sample_spec\n");}
-int pa_sndfile_writef_function(){ printf("pa_sndfile_writef_function\n");}
-int pa_snprintf(){ printf("pa_snprintf\n");}
-int pa_socket_address_is_local(){ printf("pa_socket_address_is_local\n");}
-int pa_socket_client_is_local(){ printf("pa_socket_client_is_local\n");}
-int pa_socket_client_new_ipv4(){ printf("pa_socket_client_new_ipv4\n");}
-int pa_socket_client_new_ipv6(){ printf("pa_socket_client_new_ipv6\n");}
-int pa_socket_client_new_sockaddr(){ printf("pa_socket_client_new_sockaddr\n");}
-int pa_socket_client_new_string(){ printf("pa_socket_client_new_string\n");}
-int pa_socket_client_new_unix(){ printf("pa_socket_client_new_unix\n");}
-int pa_socket_client_ref(){ printf("pa_socket_client_ref\n");}
-int pa_socket_client_set_callback(){ printf("pa_socket_client_set_callback\n");}
-int pa_socket_client_unref(){ printf("pa_socket_client_unref\n");}
-int pa_socket_cloexec(){ printf("pa_socket_cloexec\n");}
-int pa_socket_is_local(){ printf("pa_socket_is_local\n");}
-int pa_socket_peer_to_string(){ printf("pa_socket_peer_to_string\n");}
-int pa_socket_server_get_address(){ printf("pa_socket_server_get_address\n");}
-int pa_socket_server_new(){ printf("pa_socket_server_new\n");}
-int pa_socket_server_new_ipv4(){ printf("pa_socket_server_new_ipv4\n");}
-int pa_socket_server_new_ipv4_any(){ printf("pa_socket_server_new_ipv4_any\n");}
-int pa_socket_server_new_ipv4_loopback(){ printf("pa_socket_server_new_ipv4_loopback\n");}
-int pa_socket_server_new_ipv4_string(){ printf("pa_socket_server_new_ipv4_string\n");}
-int pa_socket_server_new_ipv6(){ printf("pa_socket_server_new_ipv6\n");}
-int pa_socket_server_new_ipv6_any(){ printf("pa_socket_server_new_ipv6_any\n");}
-int pa_socket_server_new_ipv6_loopback(){ printf("pa_socket_server_new_ipv6_loopback\n");}
-int pa_socket_server_new_ipv6_string(){ printf("pa_socket_server_new_ipv6_string\n");}
-int pa_socket_server_new_unix(){ printf("pa_socket_server_new_unix\n");}
-int pa_socket_server_ref(){ printf("pa_socket_server_ref\n");}
-int pa_socket_server_set_callback(){ printf("pa_socket_server_set_callback\n");}
-int pa_socket_server_unref(){ printf("pa_socket_server_unref\n");}
-int pa_socket_set_rcvbuf(){ printf("pa_socket_set_rcvbuf\n");}
-int pa_socket_set_sndbuf(){ printf("pa_socket_set_sndbuf\n");}
-int pa_split(){ printf("pa_split\n");}
-int pa_split_in_place(){ printf("pa_split_in_place\n");}
-int pa_split_spaces(){ printf("pa_split_spaces\n");}
-int pa_split_spaces_strv(){ printf("pa_split_spaces_strv\n");}
-int pa_sprintf_malloc(){ printf("pa_sprintf_malloc\n");}
-int pa_startswith(){ printf("pa_startswith\n");}
-int pa_state_path(){ printf("pa_state_path\n");}
-int pa_static_mutex_get(){ printf("pa_static_mutex_get\n");}
-int pa_static_semaphore_get(){ printf("pa_static_semaphore_get\n");}
-int pa_str_in_list_spaces(){ printf("pa_str_in_list_spaces\n");}
-int pa_strbuf_free(){ printf("pa_strbuf_free\n");}
-int pa_strbuf_isempty(){ printf("pa_strbuf_isempty\n");}
-int pa_strbuf_new(){ printf("pa_strbuf_new\n");}
-int pa_strbuf_printf(){ printf("pa_strbuf_printf\n");}
-int pa_strbuf_putc(){ printf("pa_strbuf_putc\n");}
-int pa_strbuf_puts(){ printf("pa_strbuf_puts\n");}
-int pa_strbuf_putsn(){ printf("pa_strbuf_putsn\n");}
-int pa_strbuf_tostring(){ printf("pa_strbuf_tostring\n");}
-int pa_strbuf_tostring_free(){ printf("pa_strbuf_tostring_free\n");}
-int pa_stream_begin_write(){ printf("pa_stream_begin_write\n");}
-int pa_stream_cancel_write(){ printf("pa_stream_cancel_write\n");}
-/* int pa_stream_connect_playback(){ printf("pa_stream_connect_playback\n");} */
-/*int pa_stream_connect_record(){ printf("pa_stream_connect_record\n");}*/
-int pa_stream_connect_upload(){ printf("pa_stream_connect_upload\n");}
-/*int pa_stream_cork(){ printf("pa_stream_cork\n");}*/
-/*int pa_stream_disconnect(){ printf("pa_stream_disconnect\n");}*/
-int pa_stream_drain(){ printf("pa_stream_drain\n");}
-/*int pa_stream_drop(){ printf("pa_stream_drop\n");}*/
-int pa_stream_finish_upload(){ printf("pa_stream_finish_upload\n");}
-int pa_stream_flush(){ printf("pa_stream_flush\n");}
-/*int pa_stream_get_buffer_attr(){ printf("pa_stream_get_buffer_attr\n");}*/
-int pa_stream_get_channel_map(){ printf("pa_stream_get_channel_map\n");}
-int pa_stream_get_context(){ printf("pa_stream_get_context\n");}
-/*int pa_stream_get_device_index(){ printf("pa_stream_get_device_index\n");}*/
-int pa_stream_get_device_name(){ printf("pa_stream_get_device_name\n");}
-int pa_stream_get_format_info(){ printf("pa_stream_get_format_info\n");}
-int pa_stream_get_index(){ printf("pa_stream_get_index\n");}
-int pa_stream_get_latency(){ printf("pa_stream_get_latency\n");}
-int pa_stream_get_monitor_stream(){ printf("pa_stream_get_monitor_stream\n");}
-/*int pa_stream_get_sample_spec(){ printf("pa_stream_get_sample_spec\n");}*/
-/*int pa_stream_get_state(){ printf("pa_stream_get_state\n");}*/
-int pa_stream_get_time(){ printf("pa_stream_get_time\n");}
-int pa_stream_get_timing_info(){ printf("pa_stream_get_timing_info\n");}
-int pa_stream_get_underflow_index(){ printf("pa_stream_get_underflow_index\n");}
-int pa_stream_is_corked(){ printf("pa_stream_is_corked\n");}
-int pa_stream_is_suspended(){ printf("pa_stream_is_suspended\n");}
-/*int pa_stream_new(){ printf("pa_stream_new\n");}*/
-int pa_stream_new_extended(){ printf("pa_stream_new_extended\n");}
-int pa_stream_new_with_proplist(){ printf("pa_stream_new_with_proplist\n");}
-/*int pa_stream_peek(){ printf("pa_stream_peek\n");}*/
-int pa_stream_prebuf(){ printf("pa_stream_prebuf\n");}
-int pa_stream_proplist_remove(){ printf("pa_stream_proplist_remove\n");}
-int pa_stream_proplist_update(){ printf("pa_stream_proplist_update\n");}
-int pa_stream_readable_size(){ printf("pa_stream_readable_size\n");}
-int pa_stream_ref(){ printf("pa_stream_ref\n");}
-int pa_stream_set_buffer_attr(){ printf("pa_stream_set_buffer_attr\n");}
-int pa_stream_set_buffer_attr_callback(){ printf("pa_stream_set_buffer_attr_callback\n");}
-int pa_stream_set_event_callback(){ printf("pa_stream_set_event_callback\n");}
-int pa_stream_set_latency_update_callback(){ printf("pa_stream_set_latency_update_callback\n");}
-int pa_stream_set_monitor_stream(){ printf("pa_stream_set_monitor_stream\n");}
-int pa_stream_set_moved_callback(){ printf("pa_stream_set_moved_callback\n");}
-int pa_stream_set_name(){ printf("pa_stream_set_name\n");}
-int pa_stream_set_overflow_callback(){ printf("pa_stream_set_overflow_callback\n");}
-/*int pa_stream_set_read_callback(){ printf("pa_stream_set_read_callback\n");}*/
-int pa_stream_set_started_callback(){ printf("pa_stream_set_started_callback\n");}
-/*int pa_stream_set_state_callback(){ printf("pa_stream_set_state_callback\n");}*/
-int pa_stream_set_suspended_callback(){ printf("pa_stream_set_suspended_callback\n");}
-/*int pa_stream_set_underflow_callback(){ printf("pa_stream_set_underflow_callback\n");}*/
-/*int pa_stream_set_write_callback(){ printf("pa_stream_set_write_callback\n");}*/
-/*int pa_stream_trigger(){ printf("pa_stream_trigger\n");}*/
-/*int pa_stream_unref(){ printf("pa_stream_unref\n");}*/
-int pa_stream_update_sample_rate(){ printf("pa_stream_update_sample_rate\n");}
-int pa_stream_update_timing_info(){ printf("pa_stream_update_timing_info\n");}
-int pa_stream_writable_size(){ printf("pa_stream_writable_size\n");}
-/*int pa_stream_write(){ printf("pa_stream_write\n");}*/
-int pa_strerror(){ printf("pa_strerror\n");}
-int pa_strip(){ printf("pa_strip\n");}
-int pa_strip_nl(){ printf("pa_strip_nl\n");}
-int pa_strlcpy(){ printf("pa_strlcpy\n");}
-int pa_strlist_data(){ printf("pa_strlist_data\n");}
-int pa_strlist_free(){ printf("pa_strlist_free\n");}
-int pa_strlist_next(){ printf("pa_strlist_next\n");}
-int pa_strlist_parse(){ printf("pa_strlist_parse\n");}
-int pa_strlist_pop(){ printf("pa_strlist_pop\n");}
-int pa_strlist_prepend(){ printf("pa_strlist_prepend\n");}
-int pa_strlist_remove(){ printf("pa_strlist_remove\n");}
-int pa_strlist_reverse(){ printf("pa_strlist_reverse\n");}
-int pa_strlist_tostring(){ printf("pa_strlist_tostring\n");}
-int pa_sw_cvolume_divide(){ printf("pa_sw_cvolume_divide\n");}
-int pa_sw_cvolume_divide_scalar(){ printf("pa_sw_cvolume_divide_scalar\n");}
-int pa_sw_cvolume_multiply(){ printf("pa_sw_cvolume_multiply\n");}
-int pa_sw_cvolume_multiply_scalar(){ printf("pa_sw_cvolume_multiply_scalar\n");}
-int pa_sw_cvolume_snprint_dB(){ printf("pa_sw_cvolume_snprint_dB\n");}
-int pa_sw_volume_divide(){ printf("pa_sw_volume_divide\n");}
-int pa_sw_volume_from_dB(){ printf("pa_sw_volume_from_dB\n");}
-int pa_sw_volume_from_linear(){ printf("pa_sw_volume_from_linear\n");}
-int pa_sw_volume_multiply(){ printf("pa_sw_volume_multiply\n");}
-int pa_sw_volume_snprint_dB(){ printf("pa_sw_volume_snprint_dB\n");}
-int pa_sw_volume_to_dB(){ printf("pa_sw_volume_to_dB\n");}
-int pa_sw_volume_to_linear(){ printf("pa_sw_volume_to_linear\n");}
-int pa_tagstruct_data(){ printf("pa_tagstruct_data\n");}
-int pa_tagstruct_eof(){ printf("pa_tagstruct_eof\n");}
-int pa_tagstruct_free(){ printf("pa_tagstruct_free\n");}
-int pa_tagstruct_free_data(){ printf("pa_tagstruct_free_data\n");}
-int pa_tagstruct_get(){ printf("pa_tagstruct_get\n");}
-int pa_tagstruct_get_arbitrary(){ printf("pa_tagstruct_get_arbitrary\n");}
-int pa_tagstruct_get_boolean(){ printf("pa_tagstruct_get_boolean\n");}
-int pa_tagstruct_get_channel_map(){ printf("pa_tagstruct_get_channel_map\n");}
-int pa_tagstruct_get_cvolume(){ printf("pa_tagstruct_get_cvolume\n");}
-int pa_tagstruct_get_format_info(){ printf("pa_tagstruct_get_format_info\n");}
-int pa_tagstruct_get_proplist(){ printf("pa_tagstruct_get_proplist\n");}
-int pa_tagstruct_get_sample_spec(){ printf("pa_tagstruct_get_sample_spec\n");}
-int pa_tagstruct_get_timeval(){ printf("pa_tagstruct_get_timeval\n");}
-int pa_tagstruct_get_usec(){ printf("pa_tagstruct_get_usec\n");}
-int pa_tagstruct_get_volume(){ printf("pa_tagstruct_get_volume\n");}
-int pa_tagstruct_gets(){ printf("pa_tagstruct_gets\n");}
-int pa_tagstruct_gets64(){ printf("pa_tagstruct_gets64\n");}
-int pa_tagstruct_getu32(){ printf("pa_tagstruct_getu32\n");}
-int pa_tagstruct_getu64(){ printf("pa_tagstruct_getu64\n");}
-int pa_tagstruct_getu8(){ printf("pa_tagstruct_getu8\n");}
-int pa_tagstruct_new(){ printf("pa_tagstruct_new\n");}
-int pa_tagstruct_put(){ printf("pa_tagstruct_put\n");}
-int pa_tagstruct_put_arbitrary(){ printf("pa_tagstruct_put_arbitrary\n");}
-int pa_tagstruct_put_boolean(){ printf("pa_tagstruct_put_boolean\n");}
-int pa_tagstruct_put_channel_map(){ printf("pa_tagstruct_put_channel_map\n");}
-int pa_tagstruct_put_cvolume(){ printf("pa_tagstruct_put_cvolume\n");}
-int pa_tagstruct_put_format_info(){ printf("pa_tagstruct_put_format_info\n");}
-int pa_tagstruct_put_proplist(){ printf("pa_tagstruct_put_proplist\n");}
-int pa_tagstruct_put_sample_spec(){ printf("pa_tagstruct_put_sample_spec\n");}
-int pa_tagstruct_put_timeval(){ printf("pa_tagstruct_put_timeval\n");}
-int pa_tagstruct_put_usec(){ printf("pa_tagstruct_put_usec\n");}
-int pa_tagstruct_put_volume(){ printf("pa_tagstruct_put_volume\n");}
-int pa_tagstruct_puts(){ printf("pa_tagstruct_puts\n");}
-int pa_tagstruct_puts64(){ printf("pa_tagstruct_puts64\n");}
-int pa_tagstruct_putu32(){ printf("pa_tagstruct_putu32\n");}
-int pa_tagstruct_putu64(){ printf("pa_tagstruct_putu64\n");}
-int pa_tagstruct_putu8(){ printf("pa_tagstruct_putu8\n");}
-int pa_thread_free(){ printf("pa_thread_free\n");}
-int pa_thread_free_nojoin(){ printf("pa_thread_free_nojoin\n");}
-int pa_thread_get_data(){ printf("pa_thread_get_data\n");}
-int pa_thread_get_name(){ printf("pa_thread_get_name\n");}
-int pa_thread_is_running(){ printf("pa_thread_is_running\n");}
-int pa_thread_join(){ printf("pa_thread_join\n");}
-int pa_thread_new(){ printf("pa_thread_new\n");}
-int pa_thread_self(){ printf("pa_thread_self\n");}
-int pa_thread_set_data(){ printf("pa_thread_set_data\n");}
-int pa_thread_set_name(){ printf("pa_thread_set_name\n");}
-int pa_thread_yield(){ printf("pa_thread_yield\n");}
-int pa_threaded_mainloop_accept(){ printf("pa_threaded_mainloop_accept\n");}
-int pa_threaded_mainloop_free(){ printf("pa_threaded_mainloop_free\n");}
-/*int pa_threaded_mainloop_get_api(){ printf("pa_threaded_mainloop_get_api\n");} */
-int pa_threaded_mainloop_get_retval(){ printf("pa_threaded_mainloop_get_retval\n");}
-/*int pa_threaded_mainloop_in_thread(){ printf("pa_threaded_mainloop_in_thread\n");}*/
-/*int pa_threaded_mainloop_lock(){ printf("pa_threaded_mainloop_lock\n");}*/
-/*int pa_threaded_mainloop_new(){ printf("pa_threaded_mainloop_new\n");}*/
-int pa_threaded_mainloop_set_name(){ printf("pa_threaded_mainloop_set_name\n");}
-/*int pa_threaded_mainloop_signal(){ printf("pa_threaded_mainloop_signal\n");}*/
-/*int pa_threaded_mainloop_start(){ printf("pa_threaded_mainloop_start\n");}*/
-int pa_threaded_mainloop_stop(){ printf("pa_threaded_mainloop_stop\n");}
-/*int pa_threaded_mainloop_unlock(){ printf("pa_threaded_mainloop_unlock\n");}*/
-/*int pa_threaded_mainloop_wait(){ printf("pa_threaded_mainloop_wait\n");}*/
-int pa_timespec_load(){ printf("pa_timespec_load\n");}
-int pa_timespec_store(){ printf("pa_timespec_store\n");}
-int pa_timeval_add(){ printf("pa_timeval_add\n");}
-int pa_timeval_age(){ printf("pa_timeval_age\n");}
-int pa_timeval_cmp(){ printf("pa_timeval_cmp\n");}
-int pa_timeval_diff(){ printf("pa_timeval_diff\n");}
-int pa_timeval_load(){ printf("pa_timeval_load\n");}
-int pa_timeval_rtstore(){ printf("pa_timeval_rtstore\n");}
-int pa_timeval_store(){ printf("pa_timeval_store\n");}
-int pa_timeval_sub(){ printf("pa_timeval_sub\n");}
-int pa_tls_free(){ printf("pa_tls_free\n");}
-int pa_tls_get(){ printf("pa_tls_get\n");}
-int pa_tls_new(){ printf("pa_tls_new\n");}
-int pa_tls_set(){ printf("pa_tls_set\n");}
-int pa_tokenizer_free(){ printf("pa_tokenizer_free\n");}
-int pa_tokenizer_get(){ printf("pa_tokenizer_get\n");}
-int pa_tokenizer_new(){ printf("pa_tokenizer_new\n");}
-int pa_truncate_utf8(){ printf("pa_truncate_utf8\n");}
-int pa_uid_in_group(){ printf("pa_uid_in_group\n");}
-int pa_uname_string(){ printf("pa_uname_string\n");}
-int pa_unblock_sigs(){ printf("pa_unblock_sigs\n");}
-int pa_unblock_sigsv(){ printf("pa_unblock_sigsv\n");}
-int pa_unescape(){ printf("pa_unescape\n");}
-int pa_unix_socket_is_stale(){ printf("pa_unix_socket_is_stale\n");}
-int pa_unix_socket_remove_stale(){ printf("pa_unix_socket_remove_stale\n");}
-int pa_unlock_lockfile(){ printf("pa_unlock_lockfile\n");}
-int pa_unset_env_recorded(){ printf("pa_unset_env_recorded\n");}
-/*int pa_usec_to_bytes(){ printf("pa_usec_to_bytes\n");}*/
-int pa_usec_to_bytes_round_up(){ printf("pa_usec_to_bytes_round_up\n");}
-int pa_utf8_filter(){ printf("pa_utf8_filter\n");}
-int pa_utf8_to_locale(){ printf("pa_utf8_to_locale\n");}
-int pa_utf8_valid(){ printf("pa_utf8_valid\n");}
-int pa_volume_func_init_arm(){ printf("pa_volume_func_init_arm\n");}
-int pa_volume_func_init_mmx(){ printf("pa_volume_func_init_mmx\n");}
-int pa_volume_func_init_sse(){ printf("pa_volume_func_init_sse\n");}
-int pa_volume_snprint(){ printf("pa_volume_snprint\n");}
-int pa_volume_snprint_verbose(){ printf("pa_volume_snprint_verbose\n");}
-int pa_vsnprintf(){ printf("pa_vsnprintf\n");}
-int pa_vsprintf_malloc(){ printf("pa_vsprintf_malloc\n");}
-int pa_will_need(){ printf("pa_will_need\n");}
-int pa_write(){ printf("pa_write\n");}
-int pa_x11_del_prop(){ printf("pa_x11_del_prop\n");}
-int pa_x11_get_prop(){ printf("pa_x11_get_prop\n");}
-int pa_x11_set_prop(){ printf("pa_x11_set_prop\n");}
-int pa_xfree(){ printf("pa_xfree\n");}
-int pa_xfreev(){ printf("pa_xfreev\n");}
-int pa_xmalloc(){ printf("pa_xmalloc\n");}
-int pa_xmalloc0(){ printf("pa_xmalloc0\n");}
-int pa_xmemdup(){ printf("pa_xmemdup\n");}
-int pa_xrealloc(){ printf("pa_xrealloc\n");}
-int pa_xstrdup(){ printf("pa_xstrdup\n");}
+#include "libpulse.h"
+
 
 
 #define log empty_log
@@ -938,140 +17,6 @@ int pa_xstrdup(){ printf("pa_xstrdup\n");}
 static void empty_log(char* format, ...){
     
 }
-
-typedef struct pa_mainloop_api{
-    void *userdata;
-
-    void* (*io_new)();
-    void (*io_enable)();
-    void (*io_free)();
-    void (*io_set_destroy)();
-
-    void* (*time_new)();
-    void (*time_restart)();
-    void (*time_free)();
-    void (*time_set_destroy)();
-    
-    void* (*defer_new)();
-    void (*defer_enable)();
-    void (*defer_free)();
-    void (*defer_set_destroy)();
-
-    void (*quit)();
-
-    void* (*rtclock_time_new)();
-    void (*rtclock_time_restart)();
-} pa_mainloop_api;
-
-
-typedef void(* pa_context_notify_cb_t)(int *c, void *userdata);
-
-
-typedef enum pa_sample_format {
-    PA_SAMPLE_U8,
-    PA_SAMPLE_ALAW,
-    PA_SAMPLE_ULAW,
-    PA_SAMPLE_S16LE,
-    PA_SAMPLE_S16BE,
-    PA_SAMPLE_FLOAT32LE,
-    PA_SAMPLE_FLOAT32BE,
-    PA_SAMPLE_S32LE,
-    PA_SAMPLE_S32BE,
-    PA_SAMPLE_S24LE,
-    PA_SAMPLE_S24BE,
-    PA_SAMPLE_S24_32LE,
-    PA_SAMPLE_S24_32BE,
-    PA_SAMPLE_MAX,
-    PA_SAMPLE_INVALID = -1
-} pa_sample_format_t;
-
-static const size_t size_table[] = {
-    [PA_SAMPLE_U8] = 1,
-    [PA_SAMPLE_ULAW] = 1,
-    [PA_SAMPLE_ALAW] = 1,
-    [PA_SAMPLE_S16LE] = 2,
-    [PA_SAMPLE_S16BE] = 2,
-    [PA_SAMPLE_FLOAT32LE] = 4,
-    [PA_SAMPLE_FLOAT32BE] = 4,
-    [PA_SAMPLE_S32LE] = 4,
-    [PA_SAMPLE_S32BE] = 4,
-    [PA_SAMPLE_S24LE] = 3,
-    [PA_SAMPLE_S24BE] = 3,
-    [PA_SAMPLE_S24_32LE] = 4,
-    [PA_SAMPLE_S24_32BE] = 4
-};
-
-typedef struct why_buffer{
-    char *buffer;
-    size_t buffer_size;
-    pthread_mutex_t mutex;
-    size_t tail;
-} why_buffer;
-
-typedef struct pa_sample_spec {
-    pa_sample_format_t format;
-    uint32_t rate;
-    uint8_t channels;
-} pa_sample_spec;
-
-typedef struct pa_channel_map {
-    uint8_t channels;
-    int map[32];
-} pa_channel_map;
-
-typedef struct stream stream_t;
-
-
- typedef struct pa_buffer_attr {
-    uint32_t maxlength;
-    uint32_t tlength;
-    uint32_t prebuf;
-    uint32_t minreq;
-    uint32_t fragsize;
-} pa_buffer_attr;
-
-typedef void(* pa_stream_notify_cb_t)(stream_t* p, void *userdata);
-typedef void(* pa_stream_request_cb_t)(stream_t *p, size_t nbytes, void *userdata);
-
-struct stream {
-    int fd;
-    int running;
-    pthread_t thread;
-    pa_stream_request_cb_t write_callback;
-    void* write_userdata;
-    pa_stream_request_cb_t read_callback;
-    void* read_userdata;
-    pa_stream_notify_cb_t notify_callback;
-    void* notify_userdata;
-    pa_stream_notify_cb_t underflow_callback;
-    void* underflow_userdata;
-    pa_sample_spec sample_spec;
-    pa_buffer_attr buffer_attr;
-    why_buffer* buffer;
-    char name[200];
-    int corked;
-};
-
-typedef enum pa_stream_state pa_stream_state_t;
-enum  	pa_stream_state {
-  PA_STREAM_UNCONNECTED,
-  PA_STREAM_CREATING,
-  PA_STREAM_READY,
-  PA_STREAM_FAILED,
-  PA_STREAM_TERMINATED
-};
-
-typedef void(* pa_stream_success_cb_t)(stream_t *s, int success, void *userdata);
-
-enum  	pa_seek_mode {
-  PA_SEEK_RELATIVE = 0,
-  PA_SEEK_ABSOLUTE = 1,
-  PA_SEEK_RELATIVE_ON_READ = 2,
-  PA_SEEK_RELATIVE_END = 3
-};
-
-typedef enum pa_seek_mode pa_seek_mode_t;
-typedef void* pa_free_cb_t;
 
 static int operation;
 
@@ -1592,50 +537,55 @@ void pa_operation_unref (int *o){
     log("pa_operation_unref: nothing to do\n");
 }
 
-void* d_io_new(){
+
+/* The following functions don't seem to be used by skype. 
+ * Nevertheless, skype does call the pa_threaded_mainloop_get_api functions, 
+ * so we keep it to be safe: */
+
+static void* d_io_new(){
     log("io_new\n");
     return NULL;
 }
-void d_io_enable(){
+static void d_io_enable(){
     log("io_enable\n");
 }
-void d_io_free(){
+static void d_io_free(){
     log("io_free\n");
 }
-void d_io_set_destroy(){
+static void d_io_set_destroy(){
     log("io_set_destroy\n");
 }
 
 
-void* d_time_new(){
+static void* d_time_new(){
     log("time_new\n");
     return NULL;
 }
-void d_time_restart(){
+static void d_time_restart(){
     log("time_restart\n");
 }
-void d_time_free(){
+static void d_time_free(){
     log("time_free\n");
 }
-void d_time_set_destroy(){
+static void d_time_set_destroy(){
     log("time_set_destroy\n");
 }
 
-void* d_defer_new(){
+static void* d_defer_new(){
     log("d_defer_new\n");
     return NULL;
 }
-void d_defer_enable(){
+static void d_defer_enable(){
     log("defer_enable\n");
 }
-void d_defer_free(){
+static void d_defer_free(){
     log("defer_free\n");
 }
-void d_defer_set_destroy(){
+static void d_defer_set_destroy(){
     log("defer_set_destroy\n");
 }
 
-void d_quit(){
+static void d_quit(){
     log("quit\n");
 }
 
@@ -1679,3 +629,930 @@ pa_mainloop_api* pa_threaded_mainloop_get_api (int * m){
 
     return &api;
 }
+
+/* This is a complete list of pulseaudio symbols: */
+
+
+NOT_IMPLEMENTED(pa_accept_cloexec)
+NOT_IMPLEMENTED(pa_ascii_filter)
+NOT_IMPLEMENTED(pa_ascii_valid)
+NOT_IMPLEMENTED(pa_atod)
+NOT_IMPLEMENTED(pa_atoi)
+NOT_IMPLEMENTED(pa_atol)
+NOT_IMPLEMENTED(pa_atou)
+NOT_IMPLEMENTED(pa_aupdate_free)
+NOT_IMPLEMENTED(pa_aupdate_new)
+NOT_IMPLEMENTED(pa_aupdate_read_begin)
+NOT_IMPLEMENTED(pa_aupdate_read_end)
+NOT_IMPLEMENTED(pa_aupdate_write_begin)
+NOT_IMPLEMENTED(pa_aupdate_write_end)
+NOT_IMPLEMENTED(pa_aupdate_write_swap)
+NOT_IMPLEMENTED(pa_authkey_load)
+NOT_IMPLEMENTED(pa_authkey_load_auto)
+NOT_IMPLEMENTED(pa_authkey_save)
+NOT_IMPLEMENTED(pa_autospawn_lock_acquire)
+NOT_IMPLEMENTED(pa_autospawn_lock_done)
+NOT_IMPLEMENTED(pa_autospawn_lock_init)
+NOT_IMPLEMENTED(pa_autospawn_lock_release)
+NOT_IMPLEMENTED(pa_bitset_equals)
+NOT_IMPLEMENTED(pa_bitset_get)
+NOT_IMPLEMENTED(pa_bitset_set)
+NOT_IMPLEMENTED(pa_bytes_per_second)
+NOT_IMPLEMENTED(pa_bytes_snprint)
+NOT_IMPLEMENTED(pa_bytes_to_usec)
+NOT_IMPLEMENTED(pa_bytes_to_usec_round_up)
+NOT_IMPLEMENTED(pa_channel_map_can_balance)
+NOT_IMPLEMENTED(pa_channel_map_can_fade)
+NOT_IMPLEMENTED(pa_channel_map_compatible)
+NOT_IMPLEMENTED(pa_channel_map_equal)
+NOT_IMPLEMENTED(pa_channel_map_has_position)
+NOT_IMPLEMENTED(pa_channel_map_init)
+NOT_IMPLEMENTED(pa_channel_map_init_auto)
+NOT_IMPLEMENTED(pa_channel_map_init_extend)
+/*NOT_IMPLEMENTED(pa_channel_map_init_mono)*/
+/*NOT_IMPLEMENTED(pa_channel_map_init_stereo)*/
+NOT_IMPLEMENTED(pa_channel_map_mask)
+NOT_IMPLEMENTED(pa_channel_map_parse)
+NOT_IMPLEMENTED(pa_channel_map_snprint)
+NOT_IMPLEMENTED(pa_channel_map_superset)
+NOT_IMPLEMENTED(pa_channel_map_to_name)
+NOT_IMPLEMENTED(pa_channel_map_to_pretty_name)
+NOT_IMPLEMENTED(pa_channel_map_valid)
+NOT_IMPLEMENTED(pa_channel_position_from_string)
+NOT_IMPLEMENTED(pa_channel_position_to_pretty_string)
+NOT_IMPLEMENTED(pa_channel_position_to_string)
+NOT_IMPLEMENTED(pa_channels_valid)
+NOT_IMPLEMENTED(pa_check_in_group)
+NOT_IMPLEMENTED(pa_check_signal_is_blocked)
+NOT_IMPLEMENTED(pa_client_conf_env)
+NOT_IMPLEMENTED(pa_client_conf_free)
+NOT_IMPLEMENTED(pa_client_conf_from_x11)
+NOT_IMPLEMENTED(pa_client_conf_load)
+NOT_IMPLEMENTED(pa_client_conf_load_cookie_from_file)
+NOT_IMPLEMENTED(pa_client_conf_load_cookie_from_hex)
+NOT_IMPLEMENTED(pa_client_conf_new)
+NOT_IMPLEMENTED(pa_client_conf_set_cookie)
+NOT_IMPLEMENTED(pa_close)
+NOT_IMPLEMENTED(pa_close_all)
+NOT_IMPLEMENTED(pa_close_allv)
+NOT_IMPLEMENTED(pa_close_pipe)
+NOT_IMPLEMENTED(pa_cond_free)
+NOT_IMPLEMENTED(pa_cond_new)
+NOT_IMPLEMENTED(pa_cond_signal)
+NOT_IMPLEMENTED(pa_cond_wait)
+NOT_IMPLEMENTED(pa_config_parse)
+NOT_IMPLEMENTED(pa_config_parse_bool)
+NOT_IMPLEMENTED(pa_config_parse_int)
+NOT_IMPLEMENTED(pa_config_parse_not_bool)
+NOT_IMPLEMENTED(pa_config_parse_size)
+NOT_IMPLEMENTED(pa_config_parse_string)
+NOT_IMPLEMENTED(pa_config_parse_unsigned)
+NOT_IMPLEMENTED(pa_context_add_autoload)
+/*NOT_IMPLEMENTED(pa_context_connect)*/
+NOT_IMPLEMENTED(pa_context_disconnect)
+/*NOT_IMPLEMENTED(pa_context_drain)*/
+NOT_IMPLEMENTED(pa_context_errno)
+NOT_IMPLEMENTED(pa_context_exit_daemon)
+NOT_IMPLEMENTED(pa_context_get_autoload_info_by_index)
+NOT_IMPLEMENTED(pa_context_get_autoload_info_by_name)
+NOT_IMPLEMENTED(pa_context_get_autoload_info_list)
+NOT_IMPLEMENTED(pa_context_get_card_info_by_index)
+NOT_IMPLEMENTED(pa_context_get_card_info_by_name)
+NOT_IMPLEMENTED(pa_context_get_card_info_list)
+NOT_IMPLEMENTED(pa_context_get_client_info)
+NOT_IMPLEMENTED(pa_context_get_client_info_list)
+NOT_IMPLEMENTED(pa_context_get_index)
+NOT_IMPLEMENTED(pa_context_get_module_info)
+NOT_IMPLEMENTED(pa_context_get_module_info_list)
+NOT_IMPLEMENTED(pa_context_get_protocol_version)
+NOT_IMPLEMENTED(pa_context_get_sample_info_by_index)
+NOT_IMPLEMENTED(pa_context_get_sample_info_by_name)
+NOT_IMPLEMENTED(pa_context_get_sample_info_list)
+NOT_IMPLEMENTED(pa_context_get_server)
+NOT_IMPLEMENTED(pa_context_get_server_info)
+NOT_IMPLEMENTED(pa_context_get_server_protocol_version)
+NOT_IMPLEMENTED(pa_context_get_sink_info_by_index)
+NOT_IMPLEMENTED(pa_context_get_sink_info_by_name)
+NOT_IMPLEMENTED(pa_context_get_sink_info_list)
+NOT_IMPLEMENTED(pa_context_get_sink_input_info)
+NOT_IMPLEMENTED(pa_context_get_sink_input_info_list)
+NOT_IMPLEMENTED(pa_context_get_source_info_by_index)
+NOT_IMPLEMENTED(pa_context_get_source_info_by_name)
+NOT_IMPLEMENTED(pa_context_get_source_info_list)
+NOT_IMPLEMENTED(pa_context_get_source_output_info)
+NOT_IMPLEMENTED(pa_context_get_source_output_info_list)
+/*NOT_IMPLEMENTED(pa_context_get_state)*/
+NOT_IMPLEMENTED(pa_context_get_tile_size)
+NOT_IMPLEMENTED(pa_context_is_local)
+NOT_IMPLEMENTED(pa_context_is_pending)
+NOT_IMPLEMENTED(pa_context_kill_client)
+NOT_IMPLEMENTED(pa_context_kill_sink_input)
+NOT_IMPLEMENTED(pa_context_kill_source_output)
+NOT_IMPLEMENTED(pa_context_load_cookie_from_file)
+NOT_IMPLEMENTED(pa_context_load_module)
+NOT_IMPLEMENTED(pa_context_move_sink_input_by_index)
+NOT_IMPLEMENTED(pa_context_move_sink_input_by_name)
+NOT_IMPLEMENTED(pa_context_move_source_output_by_index)
+NOT_IMPLEMENTED(pa_context_move_source_output_by_name)
+/*NOT_IMPLEMENTED(pa_context_new)*/
+NOT_IMPLEMENTED(pa_context_new_with_proplist)
+NOT_IMPLEMENTED(pa_context_play_sample)
+NOT_IMPLEMENTED(pa_context_play_sample_with_proplist)
+NOT_IMPLEMENTED(pa_context_proplist_remove)
+NOT_IMPLEMENTED(pa_context_proplist_update)
+NOT_IMPLEMENTED(pa_context_ref)
+NOT_IMPLEMENTED(pa_context_remove_autoload_by_index)
+NOT_IMPLEMENTED(pa_context_remove_autoload_by_name)
+NOT_IMPLEMENTED(pa_context_remove_sample)
+NOT_IMPLEMENTED(pa_context_rttime_new)
+NOT_IMPLEMENTED(pa_context_rttime_restart)
+NOT_IMPLEMENTED(pa_context_set_card_profile_by_index)
+NOT_IMPLEMENTED(pa_context_set_card_profile_by_name)
+NOT_IMPLEMENTED(pa_context_set_default_sink)
+NOT_IMPLEMENTED(pa_context_set_default_source)
+NOT_IMPLEMENTED(pa_context_set_event_callback)
+NOT_IMPLEMENTED(pa_context_set_name)
+NOT_IMPLEMENTED(pa_context_set_port_latency_offset)
+NOT_IMPLEMENTED(pa_context_set_sink_input_mute)
+NOT_IMPLEMENTED(pa_context_set_sink_input_volume)
+NOT_IMPLEMENTED(pa_context_set_sink_mute_by_index)
+NOT_IMPLEMENTED(pa_context_set_sink_mute_by_name)
+NOT_IMPLEMENTED(pa_context_set_sink_port_by_index)
+NOT_IMPLEMENTED(pa_context_set_sink_port_by_name)
+/*NOT_IMPLEMENTED(pa_context_set_sink_volume_by_index)*/
+NOT_IMPLEMENTED(pa_context_set_sink_volume_by_name)
+NOT_IMPLEMENTED(pa_context_set_source_mute_by_index)
+NOT_IMPLEMENTED(pa_context_set_source_mute_by_name)
+NOT_IMPLEMENTED(pa_context_set_source_output_mute)
+NOT_IMPLEMENTED(pa_context_set_source_output_volume)
+NOT_IMPLEMENTED(pa_context_set_source_port_by_index)
+NOT_IMPLEMENTED(pa_context_set_source_port_by_name)
+/*NOT_IMPLEMENTED(pa_context_set_source_volume_by_index)*/
+NOT_IMPLEMENTED(pa_context_set_source_volume_by_name)
+/*NOT_IMPLEMENTED(pa_context_set_state_callback)*/
+/*NOT_IMPLEMENTED(pa_context_set_subscribe_callback)*/
+NOT_IMPLEMENTED(pa_context_stat)
+/*NOT_IMPLEMENTED(pa_context_subscribe)*/
+NOT_IMPLEMENTED(pa_context_suspend_sink_by_index)
+NOT_IMPLEMENTED(pa_context_suspend_sink_by_name)
+NOT_IMPLEMENTED(pa_context_suspend_source_by_index)
+NOT_IMPLEMENTED(pa_context_suspend_source_by_name)
+NOT_IMPLEMENTED(pa_context_unload_module)
+/*NOT_IMPLEMENTED(pa_context_unref)*/
+NOT_IMPLEMENTED(pa_convert_size)
+NOT_IMPLEMENTED(pa_cstrerror)
+NOT_IMPLEMENTED(pa_cvolume_avg)
+NOT_IMPLEMENTED(pa_cvolume_avg_mask)
+NOT_IMPLEMENTED(pa_cvolume_channels_equal_to)
+NOT_IMPLEMENTED(pa_cvolume_compatible)
+NOT_IMPLEMENTED(pa_cvolume_compatible_with_channel_map)
+NOT_IMPLEMENTED(pa_cvolume_dec)
+NOT_IMPLEMENTED(pa_cvolume_equal)
+NOT_IMPLEMENTED(pa_cvolume_get_balance)
+NOT_IMPLEMENTED(pa_cvolume_get_fade)
+NOT_IMPLEMENTED(pa_cvolume_get_position)
+NOT_IMPLEMENTED(pa_cvolume_inc)
+NOT_IMPLEMENTED(pa_cvolume_inc_clamp)
+NOT_IMPLEMENTED(pa_cvolume_init)
+NOT_IMPLEMENTED(pa_cvolume_max)
+NOT_IMPLEMENTED(pa_cvolume_max_mask)
+NOT_IMPLEMENTED(pa_cvolume_merge)
+NOT_IMPLEMENTED(pa_cvolume_min)
+NOT_IMPLEMENTED(pa_cvolume_min_mask)
+NOT_IMPLEMENTED(pa_cvolume_remap)
+NOT_IMPLEMENTED(pa_cvolume_scale)
+NOT_IMPLEMENTED(pa_cvolume_scale_mask)
+/*NOT_IMPLEMENTED(pa_cvolume_set)*/
+NOT_IMPLEMENTED(pa_cvolume_set_balance)
+NOT_IMPLEMENTED(pa_cvolume_set_fade)
+NOT_IMPLEMENTED(pa_cvolume_set_position)
+NOT_IMPLEMENTED(pa_cvolume_snprint)
+NOT_IMPLEMENTED(pa_cvolume_snprint_verbose)
+NOT_IMPLEMENTED(pa_cvolume_valid)
+NOT_IMPLEMENTED(pa_deinterleave)
+NOT_IMPLEMENTED(pa_detect_fork)
+NOT_IMPLEMENTED(pa_disable_sigpipe)
+NOT_IMPLEMENTED(pa_dynarray_append)
+NOT_IMPLEMENTED(pa_dynarray_free)
+NOT_IMPLEMENTED(pa_dynarray_get)
+NOT_IMPLEMENTED(pa_dynarray_new)
+NOT_IMPLEMENTED(pa_dynarray_size)
+NOT_IMPLEMENTED(pa_dynarray_steal_last)
+NOT_IMPLEMENTED(pa_encoding_from_string)
+NOT_IMPLEMENTED(pa_encoding_to_string)
+NOT_IMPLEMENTED(pa_endswith)
+NOT_IMPLEMENTED(pa_escape)
+NOT_IMPLEMENTED(pa_ext_device_manager_delete)
+NOT_IMPLEMENTED(pa_ext_device_manager_enable_role_device_priority_routing)
+NOT_IMPLEMENTED(pa_ext_device_manager_read)
+NOT_IMPLEMENTED(pa_ext_device_manager_reorder_devices_for_role)
+NOT_IMPLEMENTED(pa_ext_device_manager_set_device_description)
+NOT_IMPLEMENTED(pa_ext_device_manager_set_subscribe_cb)
+NOT_IMPLEMENTED(pa_ext_device_manager_subscribe)
+NOT_IMPLEMENTED(pa_ext_device_manager_test)
+NOT_IMPLEMENTED(pa_ext_device_restore_read_formats)
+NOT_IMPLEMENTED(pa_ext_device_restore_read_formats_all)
+NOT_IMPLEMENTED(pa_ext_device_restore_save_formats)
+NOT_IMPLEMENTED(pa_ext_device_restore_set_subscribe_cb)
+NOT_IMPLEMENTED(pa_ext_device_restore_subscribe)
+NOT_IMPLEMENTED(pa_ext_device_restore_test)
+NOT_IMPLEMENTED(pa_ext_stream_restore_delete)
+NOT_IMPLEMENTED(pa_ext_stream_restore_read)
+NOT_IMPLEMENTED(pa_ext_stream_restore_set_subscribe_cb)
+NOT_IMPLEMENTED(pa_ext_stream_restore_subscribe)
+NOT_IMPLEMENTED(pa_ext_stream_restore_test)
+NOT_IMPLEMENTED(pa_ext_stream_restore_write)
+NOT_IMPLEMENTED(pa_find_config_file)
+NOT_IMPLEMENTED(pa_flist_free)
+NOT_IMPLEMENTED(pa_flist_new)
+NOT_IMPLEMENTED(pa_flist_new_with_name)
+NOT_IMPLEMENTED(pa_flist_pop)
+NOT_IMPLEMENTED(pa_flist_push)
+NOT_IMPLEMENTED(pa_fopen_cloexec)
+NOT_IMPLEMENTED(pa_format_info_copy)
+NOT_IMPLEMENTED(pa_format_info_free)
+NOT_IMPLEMENTED(pa_format_info_free_string_array)
+NOT_IMPLEMENTED(pa_format_info_from_sample_spec)
+NOT_IMPLEMENTED(pa_format_info_from_sample_spec2)
+NOT_IMPLEMENTED(pa_format_info_from_string)
+NOT_IMPLEMENTED(pa_format_info_get_channel_map)
+NOT_IMPLEMENTED(pa_format_info_get_channels)
+NOT_IMPLEMENTED(pa_format_info_get_prop_int)
+NOT_IMPLEMENTED(pa_format_info_get_prop_int_array)
+NOT_IMPLEMENTED(pa_format_info_get_prop_int_range)
+NOT_IMPLEMENTED(pa_format_info_get_prop_string)
+NOT_IMPLEMENTED(pa_format_info_get_prop_string_array)
+NOT_IMPLEMENTED(pa_format_info_get_prop_type)
+NOT_IMPLEMENTED(pa_format_info_get_rate)
+NOT_IMPLEMENTED(pa_format_info_get_sample_format)
+NOT_IMPLEMENTED(pa_format_info_is_compatible)
+NOT_IMPLEMENTED(pa_format_info_is_pcm)
+NOT_IMPLEMENTED(pa_format_info_new)
+NOT_IMPLEMENTED(pa_format_info_set_channel_map)
+NOT_IMPLEMENTED(pa_format_info_set_channels)
+NOT_IMPLEMENTED(pa_format_info_set_prop_int)
+NOT_IMPLEMENTED(pa_format_info_set_prop_int_array)
+NOT_IMPLEMENTED(pa_format_info_set_prop_int_range)
+NOT_IMPLEMENTED(pa_format_info_set_prop_string)
+NOT_IMPLEMENTED(pa_format_info_set_prop_string_array)
+NOT_IMPLEMENTED(pa_format_info_set_rate)
+NOT_IMPLEMENTED(pa_format_info_set_sample_format)
+NOT_IMPLEMENTED(pa_format_info_snprint)
+NOT_IMPLEMENTED(pa_format_info_to_sample_spec)
+NOT_IMPLEMENTED(pa_format_info_to_sample_spec2)
+NOT_IMPLEMENTED(pa_format_info_to_sample_spec_fake)
+NOT_IMPLEMENTED(pa_format_info_valid)
+NOT_IMPLEMENTED(pa_frame_align)
+NOT_IMPLEMENTED(pa_frame_aligned)
+/*NOT_IMPLEMENTED(pa_frame_size)*/
+NOT_IMPLEMENTED(pa_gcd)
+NOT_IMPLEMENTED(pa_get_binary_name)
+NOT_IMPLEMENTED(pa_get_binary_name_malloc)
+NOT_IMPLEMENTED(pa_get_fqdn)
+NOT_IMPLEMENTED(pa_get_gid_of_group)
+NOT_IMPLEMENTED(pa_get_home_dir)
+NOT_IMPLEMENTED(pa_get_home_dir_malloc)
+NOT_IMPLEMENTED(pa_get_host_name)
+NOT_IMPLEMENTED(pa_get_host_name_malloc)
+/*NOT_IMPLEMENTED(pa_get_library_version)*/
+NOT_IMPLEMENTED(pa_get_runtime_dir)
+NOT_IMPLEMENTED(pa_get_state_dir)
+NOT_IMPLEMENTED(pa_get_temp_dir)
+NOT_IMPLEMENTED(pa_get_user_name)
+NOT_IMPLEMENTED(pa_get_user_name_malloc)
+NOT_IMPLEMENTED(pa_get_volume_func)
+NOT_IMPLEMENTED(pa_getcwd)
+NOT_IMPLEMENTED(pa_getgrgid_free)
+NOT_IMPLEMENTED(pa_getgrgid_malloc)
+NOT_IMPLEMENTED(pa_getgrnam_free)
+NOT_IMPLEMENTED(pa_getgrnam_malloc)
+NOT_IMPLEMENTED(pa_getpwnam_free)
+NOT_IMPLEMENTED(pa_getpwnam_malloc)
+NOT_IMPLEMENTED(pa_getpwuid_free)
+NOT_IMPLEMENTED(pa_getpwuid_malloc)
+NOT_IMPLEMENTED(pa_gettimeofday)
+NOT_IMPLEMENTED(pa_hashmap_first)
+NOT_IMPLEMENTED(pa_hashmap_free)
+NOT_IMPLEMENTED(pa_hashmap_get)
+NOT_IMPLEMENTED(pa_hashmap_isempty)
+NOT_IMPLEMENTED(pa_hashmap_iterate)
+NOT_IMPLEMENTED(pa_hashmap_iterate_backwards)
+NOT_IMPLEMENTED(pa_hashmap_last)
+NOT_IMPLEMENTED(pa_hashmap_new)
+NOT_IMPLEMENTED(pa_hashmap_new_full)
+NOT_IMPLEMENTED(pa_hashmap_put)
+NOT_IMPLEMENTED(pa_hashmap_remove)
+NOT_IMPLEMENTED(pa_hashmap_remove_all)
+NOT_IMPLEMENTED(pa_hashmap_size)
+NOT_IMPLEMENTED(pa_hashmap_steal_first)
+NOT_IMPLEMENTED(pa_hexstr)
+NOT_IMPLEMENTED(pa_idxset_copy)
+NOT_IMPLEMENTED(pa_idxset_first)
+NOT_IMPLEMENTED(pa_idxset_free)
+NOT_IMPLEMENTED(pa_idxset_get_by_data)
+NOT_IMPLEMENTED(pa_idxset_get_by_index)
+NOT_IMPLEMENTED(pa_idxset_isempty)
+NOT_IMPLEMENTED(pa_idxset_iterate)
+NOT_IMPLEMENTED(pa_idxset_new)
+NOT_IMPLEMENTED(pa_idxset_next)
+NOT_IMPLEMENTED(pa_idxset_put)
+NOT_IMPLEMENTED(pa_idxset_remove_all)
+NOT_IMPLEMENTED(pa_idxset_remove_by_data)
+NOT_IMPLEMENTED(pa_idxset_remove_by_index)
+NOT_IMPLEMENTED(pa_idxset_rrobin)
+NOT_IMPLEMENTED(pa_idxset_size)
+NOT_IMPLEMENTED(pa_idxset_steal_first)
+NOT_IMPLEMENTED(pa_idxset_string_compare_func)
+NOT_IMPLEMENTED(pa_idxset_string_hash_func)
+NOT_IMPLEMENTED(pa_idxset_trivial_compare_func)
+NOT_IMPLEMENTED(pa_idxset_trivial_hash_func)
+NOT_IMPLEMENTED(pa_in_system_mode)
+/*NOT_IMPLEMENTED(pa_init_i18n)*/
+NOT_IMPLEMENTED(pa_init_proplist)
+NOT_IMPLEMENTED(pa_interleave)
+NOT_IMPLEMENTED(pa_iochannel_creds_enable)
+NOT_IMPLEMENTED(pa_iochannel_creds_supported)
+NOT_IMPLEMENTED(pa_iochannel_free)
+NOT_IMPLEMENTED(pa_iochannel_get_mainloop_api)
+NOT_IMPLEMENTED(pa_iochannel_get_recv_fd)
+NOT_IMPLEMENTED(pa_iochannel_get_send_fd)
+NOT_IMPLEMENTED(pa_iochannel_is_hungup)
+NOT_IMPLEMENTED(pa_iochannel_is_readable)
+NOT_IMPLEMENTED(pa_iochannel_is_writable)
+NOT_IMPLEMENTED(pa_iochannel_new)
+NOT_IMPLEMENTED(pa_iochannel_read)
+NOT_IMPLEMENTED(pa_iochannel_read_with_creds)
+NOT_IMPLEMENTED(pa_iochannel_set_callback)
+NOT_IMPLEMENTED(pa_iochannel_set_noclose)
+NOT_IMPLEMENTED(pa_iochannel_socket_is_local)
+NOT_IMPLEMENTED(pa_iochannel_socket_peer_to_string)
+NOT_IMPLEMENTED(pa_iochannel_socket_set_rcvbuf)
+NOT_IMPLEMENTED(pa_iochannel_socket_set_sndbuf)
+NOT_IMPLEMENTED(pa_iochannel_write)
+NOT_IMPLEMENTED(pa_iochannel_write_with_creds)
+NOT_IMPLEMENTED(pa_ioline_close)
+NOT_IMPLEMENTED(pa_ioline_defer_close)
+NOT_IMPLEMENTED(pa_ioline_detach_iochannel)
+NOT_IMPLEMENTED(pa_ioline_is_drained)
+NOT_IMPLEMENTED(pa_ioline_new)
+NOT_IMPLEMENTED(pa_ioline_printf)
+NOT_IMPLEMENTED(pa_ioline_puts)
+NOT_IMPLEMENTED(pa_ioline_ref)
+NOT_IMPLEMENTED(pa_ioline_set_callback)
+NOT_IMPLEMENTED(pa_ioline_set_drain_callback)
+NOT_IMPLEMENTED(pa_ioline_unref)
+NOT_IMPLEMENTED(pa_ip_acl_check)
+NOT_IMPLEMENTED(pa_ip_acl_free)
+NOT_IMPLEMENTED(pa_ip_acl_new)
+NOT_IMPLEMENTED(pa_is_fd_nonblock)
+NOT_IMPLEMENTED(pa_is_ip_address)
+NOT_IMPLEMENTED(pa_is_path_absolute)
+NOT_IMPLEMENTED(pa_locale_to_utf8)
+NOT_IMPLEMENTED(pa_lock_fd)
+NOT_IMPLEMENTED(pa_lock_lockfile)
+NOT_IMPLEMENTED(pa_log_level)
+NOT_IMPLEMENTED(pa_log_level_meta)
+NOT_IMPLEMENTED(pa_log_levelv)
+NOT_IMPLEMENTED(pa_log_levelv_meta)
+NOT_IMPLEMENTED(pa_log_parse_target)
+NOT_IMPLEMENTED(pa_log_ratelimit)
+NOT_IMPLEMENTED(pa_log_set_flags)
+NOT_IMPLEMENTED(pa_log_set_ident)
+NOT_IMPLEMENTED(pa_log_set_level)
+NOT_IMPLEMENTED(pa_log_set_show_backtrace)
+NOT_IMPLEMENTED(pa_log_set_skip_backtrace)
+NOT_IMPLEMENTED(pa_log_set_target)
+NOT_IMPLEMENTED(pa_log_target_free)
+NOT_IMPLEMENTED(pa_log_target_new)
+NOT_IMPLEMENTED(pa_log_target_to_string)
+NOT_IMPLEMENTED(pa_loop_read)
+NOT_IMPLEMENTED(pa_loop_write)
+NOT_IMPLEMENTED(pa_machine_id)
+NOT_IMPLEMENTED(pa_mainloop_api_once)
+NOT_IMPLEMENTED(pa_mainloop_dispatch)
+NOT_IMPLEMENTED(pa_mainloop_free)
+NOT_IMPLEMENTED(pa_mainloop_get_api)
+NOT_IMPLEMENTED(pa_mainloop_get_retval)
+NOT_IMPLEMENTED(pa_mainloop_iterate)
+NOT_IMPLEMENTED(pa_mainloop_new)
+NOT_IMPLEMENTED(pa_mainloop_poll)
+NOT_IMPLEMENTED(pa_mainloop_prepare)
+NOT_IMPLEMENTED(pa_mainloop_quit)
+NOT_IMPLEMENTED(pa_mainloop_run)
+NOT_IMPLEMENTED(pa_mainloop_set_poll_func)
+NOT_IMPLEMENTED(pa_mainloop_wakeup)
+NOT_IMPLEMENTED(pa_make_fd_block)
+NOT_IMPLEMENTED(pa_make_fd_cloexec)
+NOT_IMPLEMENTED(pa_make_fd_nonblock)
+NOT_IMPLEMENTED(pa_make_path_absolute)
+NOT_IMPLEMENTED(pa_make_realtime)
+NOT_IMPLEMENTED(pa_make_secure_dir)
+NOT_IMPLEMENTED(pa_make_secure_parent_dir)
+NOT_IMPLEMENTED(pa_make_socket_low_delay)
+NOT_IMPLEMENTED(pa_make_tcp_socket_low_delay)
+NOT_IMPLEMENTED(pa_make_udp_socket_low_delay)
+NOT_IMPLEMENTED(pa_match)
+NOT_IMPLEMENTED(pa_maybe_prefix_path)
+NOT_IMPLEMENTED(pa_mcalign_csize)
+NOT_IMPLEMENTED(pa_mcalign_flush)
+NOT_IMPLEMENTED(pa_mcalign_free)
+NOT_IMPLEMENTED(pa_mcalign_new)
+NOT_IMPLEMENTED(pa_mcalign_pop)
+NOT_IMPLEMENTED(pa_mcalign_push)
+NOT_IMPLEMENTED(pa_memblock_acquire)
+NOT_IMPLEMENTED(pa_memblock_acquire_chunk)
+NOT_IMPLEMENTED(pa_memblock_get_length)
+NOT_IMPLEMENTED(pa_memblock_get_pool)
+NOT_IMPLEMENTED(pa_memblock_is_read_only)
+NOT_IMPLEMENTED(pa_memblock_is_silence)
+NOT_IMPLEMENTED(pa_memblock_new)
+NOT_IMPLEMENTED(pa_memblock_new_fixed)
+NOT_IMPLEMENTED(pa_memblock_new_pool)
+NOT_IMPLEMENTED(pa_memblock_new_user)
+NOT_IMPLEMENTED(pa_memblock_ref)
+NOT_IMPLEMENTED(pa_memblock_ref_is_one)
+NOT_IMPLEMENTED(pa_memblock_release)
+NOT_IMPLEMENTED(pa_memblock_set_is_silence)
+NOT_IMPLEMENTED(pa_memblock_unref)
+NOT_IMPLEMENTED(pa_memblock_unref_fixed)
+NOT_IMPLEMENTED(pa_memblock_will_need)
+NOT_IMPLEMENTED(pa_memblockq_apply_attr)
+NOT_IMPLEMENTED(pa_memblockq_drop)
+NOT_IMPLEMENTED(pa_memblockq_flush_read)
+NOT_IMPLEMENTED(pa_memblockq_flush_write)
+NOT_IMPLEMENTED(pa_memblockq_free)
+NOT_IMPLEMENTED(pa_memblockq_get_attr)
+NOT_IMPLEMENTED(pa_memblockq_get_base)
+NOT_IMPLEMENTED(pa_memblockq_get_length)
+NOT_IMPLEMENTED(pa_memblockq_get_maxlength)
+NOT_IMPLEMENTED(pa_memblockq_get_maxrewind)
+NOT_IMPLEMENTED(pa_memblockq_get_minreq)
+NOT_IMPLEMENTED(pa_memblockq_get_nblocks)
+NOT_IMPLEMENTED(pa_memblockq_get_prebuf)
+NOT_IMPLEMENTED(pa_memblockq_get_read_index)
+NOT_IMPLEMENTED(pa_memblockq_get_tlength)
+NOT_IMPLEMENTED(pa_memblockq_get_write_index)
+NOT_IMPLEMENTED(pa_memblockq_is_empty)
+NOT_IMPLEMENTED(pa_memblockq_is_readable)
+NOT_IMPLEMENTED(pa_memblockq_missing)
+NOT_IMPLEMENTED(pa_memblockq_new)
+NOT_IMPLEMENTED(pa_memblockq_peek)
+NOT_IMPLEMENTED(pa_memblockq_peek_fixed_size)
+NOT_IMPLEMENTED(pa_memblockq_pop_missing)
+NOT_IMPLEMENTED(pa_memblockq_prebuf_active)
+NOT_IMPLEMENTED(pa_memblockq_prebuf_disable)
+NOT_IMPLEMENTED(pa_memblockq_prebuf_force)
+NOT_IMPLEMENTED(pa_memblockq_push)
+NOT_IMPLEMENTED(pa_memblockq_push_align)
+NOT_IMPLEMENTED(pa_memblockq_rewind)
+NOT_IMPLEMENTED(pa_memblockq_seek)
+NOT_IMPLEMENTED(pa_memblockq_set_maxlength)
+NOT_IMPLEMENTED(pa_memblockq_set_maxrewind)
+NOT_IMPLEMENTED(pa_memblockq_set_minreq)
+NOT_IMPLEMENTED(pa_memblockq_set_prebuf)
+NOT_IMPLEMENTED(pa_memblockq_set_silence)
+NOT_IMPLEMENTED(pa_memblockq_set_tlength)
+NOT_IMPLEMENTED(pa_memblockq_silence)
+NOT_IMPLEMENTED(pa_memblockq_splice)
+NOT_IMPLEMENTED(pa_memblockq_willneed)
+NOT_IMPLEMENTED(pa_memchunk_dump_to_file)
+NOT_IMPLEMENTED(pa_memchunk_isset)
+NOT_IMPLEMENTED(pa_memchunk_make_writable)
+NOT_IMPLEMENTED(pa_memchunk_memcpy)
+NOT_IMPLEMENTED(pa_memchunk_reset)
+NOT_IMPLEMENTED(pa_memchunk_sine)
+NOT_IMPLEMENTED(pa_memchunk_will_need)
+NOT_IMPLEMENTED(pa_memexport_free)
+NOT_IMPLEMENTED(pa_memexport_new)
+NOT_IMPLEMENTED(pa_memexport_process_release)
+NOT_IMPLEMENTED(pa_memexport_put)
+NOT_IMPLEMENTED(pa_memimport_free)
+NOT_IMPLEMENTED(pa_memimport_get)
+NOT_IMPLEMENTED(pa_memimport_new)
+NOT_IMPLEMENTED(pa_memimport_process_revoke)
+NOT_IMPLEMENTED(pa_mempool_block_size_max)
+NOT_IMPLEMENTED(pa_mempool_free)
+NOT_IMPLEMENTED(pa_mempool_get_shm_id)
+NOT_IMPLEMENTED(pa_mempool_get_stat)
+NOT_IMPLEMENTED(pa_mempool_is_shared)
+NOT_IMPLEMENTED(pa_mempool_new)
+NOT_IMPLEMENTED(pa_mempool_vacuum)
+NOT_IMPLEMENTED(pa_memtrap_add)
+NOT_IMPLEMENTED(pa_memtrap_install)
+NOT_IMPLEMENTED(pa_memtrap_is_good)
+NOT_IMPLEMENTED(pa_memtrap_remove)
+NOT_IMPLEMENTED(pa_memtrap_update)
+NOT_IMPLEMENTED(pa_msleep)
+NOT_IMPLEMENTED(pa_mutex_free)
+NOT_IMPLEMENTED(pa_mutex_lock)
+NOT_IMPLEMENTED(pa_mutex_new)
+NOT_IMPLEMENTED(pa_mutex_try_lock)
+NOT_IMPLEMENTED(pa_mutex_unlock)
+NOT_IMPLEMENTED(pa_ncpus)
+NOT_IMPLEMENTED(pa_nullify_stdfds)
+NOT_IMPLEMENTED(pa_once_begin)
+NOT_IMPLEMENTED(pa_once_end)
+NOT_IMPLEMENTED(pa_open_cloexec)
+NOT_IMPLEMENTED(pa_open_config_file)
+NOT_IMPLEMENTED(pa_operation_cancel)
+/*NOT_IMPLEMENTED(pa_operation_get_state)*/
+NOT_IMPLEMENTED(pa_operation_ref)
+NOT_IMPLEMENTED(pa_operation_set_state_callback)
+/*NOT_IMPLEMENTED(pa_operation_unref)*/
+NOT_IMPLEMENTED(pa_own_uid_in_group)
+NOT_IMPLEMENTED(pa_packet_new)
+NOT_IMPLEMENTED(pa_packet_new_dynamic)
+NOT_IMPLEMENTED(pa_packet_ref)
+NOT_IMPLEMENTED(pa_packet_unref)
+NOT_IMPLEMENTED(pa_parent_dir)
+NOT_IMPLEMENTED(pa_parse_address)
+NOT_IMPLEMENTED(pa_parse_boolean)
+NOT_IMPLEMENTED(pa_parse_sample_format)
+NOT_IMPLEMENTED(pa_parse_volume)
+NOT_IMPLEMENTED(pa_parsehex)
+NOT_IMPLEMENTED(pa_path_get_filename)
+NOT_IMPLEMENTED(pa_pdispatch_creds)
+NOT_IMPLEMENTED(pa_pdispatch_is_pending)
+NOT_IMPLEMENTED(pa_pdispatch_new)
+NOT_IMPLEMENTED(pa_pdispatch_ref)
+NOT_IMPLEMENTED(pa_pdispatch_register_reply)
+NOT_IMPLEMENTED(pa_pdispatch_run)
+NOT_IMPLEMENTED(pa_pdispatch_set_drain_callback)
+NOT_IMPLEMENTED(pa_pdispatch_unref)
+NOT_IMPLEMENTED(pa_pdispatch_unregister_reply)
+NOT_IMPLEMENTED(pa_pid_file_check_running)
+NOT_IMPLEMENTED(pa_pid_file_create)
+NOT_IMPLEMENTED(pa_pid_file_kill)
+NOT_IMPLEMENTED(pa_pid_file_remove)
+NOT_IMPLEMENTED(pa_pipe_buf)
+NOT_IMPLEMENTED(pa_pipe_cloexec)
+NOT_IMPLEMENTED(pa_proplist_clear)
+NOT_IMPLEMENTED(pa_proplist_contains)
+NOT_IMPLEMENTED(pa_proplist_copy)
+NOT_IMPLEMENTED(pa_proplist_equal)
+NOT_IMPLEMENTED(pa_proplist_free)
+NOT_IMPLEMENTED(pa_proplist_from_string)
+NOT_IMPLEMENTED(pa_proplist_get)
+NOT_IMPLEMENTED(pa_proplist_get_stream_group)
+NOT_IMPLEMENTED(pa_proplist_gets)
+NOT_IMPLEMENTED(pa_proplist_isempty)
+NOT_IMPLEMENTED(pa_proplist_iterate)
+NOT_IMPLEMENTED(pa_proplist_key_valid)
+NOT_IMPLEMENTED(pa_proplist_new)
+NOT_IMPLEMENTED(pa_proplist_set)
+NOT_IMPLEMENTED(pa_proplist_setf)
+NOT_IMPLEMENTED(pa_proplist_setp)
+NOT_IMPLEMENTED(pa_proplist_sets)
+NOT_IMPLEMENTED(pa_proplist_size)
+NOT_IMPLEMENTED(pa_proplist_to_string)
+NOT_IMPLEMENTED(pa_proplist_to_string_sep)
+NOT_IMPLEMENTED(pa_proplist_unset)
+NOT_IMPLEMENTED(pa_proplist_unset_many)
+NOT_IMPLEMENTED(pa_proplist_update)
+NOT_IMPLEMENTED(pa_pstream_enable_shm)
+NOT_IMPLEMENTED(pa_pstream_get_shm)
+NOT_IMPLEMENTED(pa_pstream_is_pending)
+NOT_IMPLEMENTED(pa_pstream_new)
+NOT_IMPLEMENTED(pa_pstream_ref)
+NOT_IMPLEMENTED(pa_pstream_send_error)
+NOT_IMPLEMENTED(pa_pstream_send_memblock)
+NOT_IMPLEMENTED(pa_pstream_send_packet)
+NOT_IMPLEMENTED(pa_pstream_send_release)
+NOT_IMPLEMENTED(pa_pstream_send_revoke)
+NOT_IMPLEMENTED(pa_pstream_send_simple_ack)
+NOT_IMPLEMENTED(pa_pstream_send_tagstruct_with_creds)
+NOT_IMPLEMENTED(pa_pstream_set_die_callback)
+NOT_IMPLEMENTED(pa_pstream_set_drain_callback)
+NOT_IMPLEMENTED(pa_pstream_set_receive_memblock_callback)
+NOT_IMPLEMENTED(pa_pstream_set_receive_packet_callback)
+NOT_IMPLEMENTED(pa_pstream_set_release_callback)
+NOT_IMPLEMENTED(pa_pstream_set_revoke_callback)
+NOT_IMPLEMENTED(pa_pstream_unlink)
+NOT_IMPLEMENTED(pa_pstream_unref)
+NOT_IMPLEMENTED(pa_queue_free)
+NOT_IMPLEMENTED(pa_queue_isempty)
+NOT_IMPLEMENTED(pa_queue_new)
+NOT_IMPLEMENTED(pa_queue_pop)
+NOT_IMPLEMENTED(pa_queue_push)
+NOT_IMPLEMENTED(pa_raise_priority)
+NOT_IMPLEMENTED(pa_random)
+NOT_IMPLEMENTED(pa_random_seed)
+NOT_IMPLEMENTED(pa_ratelimit_test)
+NOT_IMPLEMENTED(pa_read)
+NOT_IMPLEMENTED(pa_read_line_from_file)
+NOT_IMPLEMENTED(pa_readlink)
+NOT_IMPLEMENTED(pa_realpath)
+NOT_IMPLEMENTED(pa_reduce)
+NOT_IMPLEMENTED(pa_replace)
+NOT_IMPLEMENTED(pa_reset_personality)
+NOT_IMPLEMENTED(pa_reset_priority)
+NOT_IMPLEMENTED(pa_reset_sigs)
+NOT_IMPLEMENTED(pa_reset_sigsv)
+NOT_IMPLEMENTED(pa_rtclock_age)
+NOT_IMPLEMENTED(pa_rtclock_from_wallclock)
+NOT_IMPLEMENTED(pa_rtclock_get)
+NOT_IMPLEMENTED(pa_rtclock_hrtimer)
+NOT_IMPLEMENTED(pa_rtclock_hrtimer_enable)
+NOT_IMPLEMENTED(pa_rtclock_now)
+NOT_IMPLEMENTED(pa_run_from_build_tree)
+NOT_IMPLEMENTED(pa_run_once)
+NOT_IMPLEMENTED(pa_running_in_vm)
+NOT_IMPLEMENTED(pa_runtime_path)
+NOT_IMPLEMENTED(pa_sample_clamp)
+NOT_IMPLEMENTED(pa_sample_format_is_be)
+NOT_IMPLEMENTED(pa_sample_format_is_le)
+/*NOT_IMPLEMENTED(pa_sample_format_to_string)*/
+NOT_IMPLEMENTED(pa_sample_format_valid)
+NOT_IMPLEMENTED(pa_sample_rate_valid)
+NOT_IMPLEMENTED(pa_sample_size)
+NOT_IMPLEMENTED(pa_sample_size_of_format)
+NOT_IMPLEMENTED(pa_sample_spec_equal)
+NOT_IMPLEMENTED(pa_sample_spec_init)
+/*NOT_IMPLEMENTED(pa_sample_spec_snprint)*/
+/*NOT_IMPLEMENTED(pa_sample_spec_valid)*/
+NOT_IMPLEMENTED(pa_semaphore_free)
+NOT_IMPLEMENTED(pa_semaphore_new)
+NOT_IMPLEMENTED(pa_semaphore_post)
+NOT_IMPLEMENTED(pa_semaphore_wait)
+NOT_IMPLEMENTED(pa_session_id)
+NOT_IMPLEMENTED(pa_set_env)
+NOT_IMPLEMENTED(pa_set_env_and_record)
+NOT_IMPLEMENTED(pa_set_volume_func)
+NOT_IMPLEMENTED(pa_shm_attach_ro)
+NOT_IMPLEMENTED(pa_shm_cleanup)
+NOT_IMPLEMENTED(pa_shm_create_rw)
+NOT_IMPLEMENTED(pa_shm_free)
+NOT_IMPLEMENTED(pa_shm_punch)
+NOT_IMPLEMENTED(pa_sig2str)
+NOT_IMPLEMENTED(pa_signal_done)
+NOT_IMPLEMENTED(pa_signal_free)
+NOT_IMPLEMENTED(pa_signal_init)
+NOT_IMPLEMENTED(pa_signal_new)
+NOT_IMPLEMENTED(pa_signal_set_destroy)
+NOT_IMPLEMENTED(pa_silence_cache_done)
+NOT_IMPLEMENTED(pa_silence_cache_init)
+NOT_IMPLEMENTED(pa_silence_memblock)
+NOT_IMPLEMENTED(pa_silence_memchunk)
+NOT_IMPLEMENTED(pa_silence_memchunk_get)
+NOT_IMPLEMENTED(pa_silence_memory)
+NOT_IMPLEMENTED(pa_smoother_fix_now)
+NOT_IMPLEMENTED(pa_smoother_free)
+NOT_IMPLEMENTED(pa_smoother_get)
+NOT_IMPLEMENTED(pa_smoother_new)
+NOT_IMPLEMENTED(pa_smoother_pause)
+NOT_IMPLEMENTED(pa_smoother_put)
+NOT_IMPLEMENTED(pa_smoother_reset)
+NOT_IMPLEMENTED(pa_smoother_resume)
+NOT_IMPLEMENTED(pa_smoother_set_time_offset)
+NOT_IMPLEMENTED(pa_smoother_translate)
+NOT_IMPLEMENTED(pa_sndfile_dump_formats)
+NOT_IMPLEMENTED(pa_sndfile_format_from_string)
+NOT_IMPLEMENTED(pa_sndfile_init_proplist)
+NOT_IMPLEMENTED(pa_sndfile_read_channel_map)
+NOT_IMPLEMENTED(pa_sndfile_read_sample_spec)
+NOT_IMPLEMENTED(pa_sndfile_readf_function)
+NOT_IMPLEMENTED(pa_sndfile_write_channel_map)
+NOT_IMPLEMENTED(pa_sndfile_write_sample_spec)
+NOT_IMPLEMENTED(pa_sndfile_writef_function)
+NOT_IMPLEMENTED(pa_snprintf)
+NOT_IMPLEMENTED(pa_socket_address_is_local)
+NOT_IMPLEMENTED(pa_socket_client_is_local)
+NOT_IMPLEMENTED(pa_socket_client_new_ipv4)
+NOT_IMPLEMENTED(pa_socket_client_new_ipv6)
+NOT_IMPLEMENTED(pa_socket_client_new_sockaddr)
+NOT_IMPLEMENTED(pa_socket_client_new_string)
+NOT_IMPLEMENTED(pa_socket_client_new_unix)
+NOT_IMPLEMENTED(pa_socket_client_ref)
+NOT_IMPLEMENTED(pa_socket_client_set_callback)
+NOT_IMPLEMENTED(pa_socket_client_unref)
+NOT_IMPLEMENTED(pa_socket_cloexec)
+NOT_IMPLEMENTED(pa_socket_is_local)
+NOT_IMPLEMENTED(pa_socket_peer_to_string)
+NOT_IMPLEMENTED(pa_socket_server_get_address)
+NOT_IMPLEMENTED(pa_socket_server_new)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv4)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv4_any)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv4_loopback)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv4_string)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv6)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv6_any)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv6_loopback)
+NOT_IMPLEMENTED(pa_socket_server_new_ipv6_string)
+NOT_IMPLEMENTED(pa_socket_server_new_unix)
+NOT_IMPLEMENTED(pa_socket_server_ref)
+NOT_IMPLEMENTED(pa_socket_server_set_callback)
+NOT_IMPLEMENTED(pa_socket_server_unref)
+NOT_IMPLEMENTED(pa_socket_set_rcvbuf)
+NOT_IMPLEMENTED(pa_socket_set_sndbuf)
+NOT_IMPLEMENTED(pa_split)
+NOT_IMPLEMENTED(pa_split_in_place)
+NOT_IMPLEMENTED(pa_split_spaces)
+NOT_IMPLEMENTED(pa_split_spaces_strv)
+NOT_IMPLEMENTED(pa_sprintf_malloc)
+NOT_IMPLEMENTED(pa_startswith)
+NOT_IMPLEMENTED(pa_state_path)
+NOT_IMPLEMENTED(pa_static_mutex_get)
+NOT_IMPLEMENTED(pa_static_semaphore_get)
+NOT_IMPLEMENTED(pa_str_in_list_spaces)
+NOT_IMPLEMENTED(pa_strbuf_free)
+NOT_IMPLEMENTED(pa_strbuf_isempty)
+NOT_IMPLEMENTED(pa_strbuf_new)
+NOT_IMPLEMENTED(pa_strbuf_printf)
+NOT_IMPLEMENTED(pa_strbuf_putc)
+NOT_IMPLEMENTED(pa_strbuf_puts)
+NOT_IMPLEMENTED(pa_strbuf_putsn)
+NOT_IMPLEMENTED(pa_strbuf_tostring)
+NOT_IMPLEMENTED(pa_strbuf_tostring_free)
+NOT_IMPLEMENTED(pa_stream_begin_write)
+NOT_IMPLEMENTED(pa_stream_cancel_write)
+/*NOT_IMPLEMENTED(pa_stream_connect_playback)*/
+/*NOT_IMPLEMENTED(pa_stream_connect_record)*/
+NOT_IMPLEMENTED(pa_stream_connect_upload)
+/*NOT_IMPLEMENTED(pa_stream_cork)*/
+/*NOT_IMPLEMENTED(pa_stream_disconnect)*/
+NOT_IMPLEMENTED(pa_stream_drain)
+/*NOT_IMPLEMENTED(pa_stream_drop)*/
+NOT_IMPLEMENTED(pa_stream_finish_upload)
+NOT_IMPLEMENTED(pa_stream_flush)
+/*NOT_IMPLEMENTED(pa_stream_get_buffer_attr)*/
+NOT_IMPLEMENTED(pa_stream_get_channel_map)
+NOT_IMPLEMENTED(pa_stream_get_context)
+/*NOT_IMPLEMENTED(pa_stream_get_device_index)*/
+NOT_IMPLEMENTED(pa_stream_get_device_name)
+NOT_IMPLEMENTED(pa_stream_get_format_info)
+NOT_IMPLEMENTED(pa_stream_get_index)
+NOT_IMPLEMENTED(pa_stream_get_latency)
+NOT_IMPLEMENTED(pa_stream_get_monitor_stream)
+/*NOT_IMPLEMENTED(pa_stream_get_sample_spec)*/
+/*NOT_IMPLEMENTED(pa_stream_get_state)*/
+NOT_IMPLEMENTED(pa_stream_get_time)
+NOT_IMPLEMENTED(pa_stream_get_timing_info)
+NOT_IMPLEMENTED(pa_stream_get_underflow_index)
+NOT_IMPLEMENTED(pa_stream_is_corked)
+NOT_IMPLEMENTED(pa_stream_is_suspended)
+/*NOT_IMPLEMENTED(pa_stream_new)*/
+NOT_IMPLEMENTED(pa_stream_new_extended)
+NOT_IMPLEMENTED(pa_stream_new_with_proplist)
+/*NOT_IMPLEMENTED(pa_stream_peek)*/
+NOT_IMPLEMENTED(pa_stream_prebuf)
+NOT_IMPLEMENTED(pa_stream_proplist_remove)
+NOT_IMPLEMENTED(pa_stream_proplist_update)
+NOT_IMPLEMENTED(pa_stream_readable_size)
+NOT_IMPLEMENTED(pa_stream_ref)
+NOT_IMPLEMENTED(pa_stream_set_buffer_attr)
+NOT_IMPLEMENTED(pa_stream_set_buffer_attr_callback)
+NOT_IMPLEMENTED(pa_stream_set_event_callback)
+NOT_IMPLEMENTED(pa_stream_set_latency_update_callback)
+NOT_IMPLEMENTED(pa_stream_set_monitor_stream)
+NOT_IMPLEMENTED(pa_stream_set_moved_callback)
+NOT_IMPLEMENTED(pa_stream_set_name)
+NOT_IMPLEMENTED(pa_stream_set_overflow_callback)
+/*NOT_IMPLEMENTED(pa_stream_set_read_callback)*/
+NOT_IMPLEMENTED(pa_stream_set_started_callback)
+/*NOT_IMPLEMENTED(pa_stream_set_state_callback)*/
+NOT_IMPLEMENTED(pa_stream_set_suspended_callback)
+/*NOT_IMPLEMENTED(pa_stream_set_underflow_callback)*/
+/*NOT_IMPLEMENTED(pa_stream_set_write_callback)*/
+/*NOT_IMPLEMENTED(pa_stream_trigger)*/
+/*NOT_IMPLEMENTED(pa_stream_unref)*/
+NOT_IMPLEMENTED(pa_stream_update_sample_rate)
+NOT_IMPLEMENTED(pa_stream_update_timing_info)
+NOT_IMPLEMENTED(pa_stream_writable_size)
+/*NOT_IMPLEMENTED(pa_stream_write)*/
+NOT_IMPLEMENTED(pa_strerror)
+NOT_IMPLEMENTED(pa_strip)
+NOT_IMPLEMENTED(pa_strip_nl)
+NOT_IMPLEMENTED(pa_strlcpy)
+NOT_IMPLEMENTED(pa_strlist_data)
+NOT_IMPLEMENTED(pa_strlist_free)
+NOT_IMPLEMENTED(pa_strlist_next)
+NOT_IMPLEMENTED(pa_strlist_parse)
+NOT_IMPLEMENTED(pa_strlist_pop)
+NOT_IMPLEMENTED(pa_strlist_prepend)
+NOT_IMPLEMENTED(pa_strlist_remove)
+NOT_IMPLEMENTED(pa_strlist_reverse)
+NOT_IMPLEMENTED(pa_strlist_tostring)
+NOT_IMPLEMENTED(pa_sw_cvolume_divide)
+NOT_IMPLEMENTED(pa_sw_cvolume_divide_scalar)
+NOT_IMPLEMENTED(pa_sw_cvolume_multiply)
+NOT_IMPLEMENTED(pa_sw_cvolume_multiply_scalar)
+NOT_IMPLEMENTED(pa_sw_cvolume_snprint_dB)
+NOT_IMPLEMENTED(pa_sw_volume_divide)
+NOT_IMPLEMENTED(pa_sw_volume_from_dB)
+NOT_IMPLEMENTED(pa_sw_volume_from_linear)
+NOT_IMPLEMENTED(pa_sw_volume_multiply)
+NOT_IMPLEMENTED(pa_sw_volume_snprint_dB)
+NOT_IMPLEMENTED(pa_sw_volume_to_dB)
+NOT_IMPLEMENTED(pa_sw_volume_to_linear)
+NOT_IMPLEMENTED(pa_tagstruct_data)
+NOT_IMPLEMENTED(pa_tagstruct_eof)
+NOT_IMPLEMENTED(pa_tagstruct_free)
+NOT_IMPLEMENTED(pa_tagstruct_free_data)
+NOT_IMPLEMENTED(pa_tagstruct_get)
+NOT_IMPLEMENTED(pa_tagstruct_get_arbitrary)
+NOT_IMPLEMENTED(pa_tagstruct_get_boolean)
+NOT_IMPLEMENTED(pa_tagstruct_get_channel_map)
+NOT_IMPLEMENTED(pa_tagstruct_get_cvolume)
+NOT_IMPLEMENTED(pa_tagstruct_get_format_info)
+NOT_IMPLEMENTED(pa_tagstruct_get_proplist)
+NOT_IMPLEMENTED(pa_tagstruct_get_sample_spec)
+NOT_IMPLEMENTED(pa_tagstruct_get_timeval)
+NOT_IMPLEMENTED(pa_tagstruct_get_usec)
+NOT_IMPLEMENTED(pa_tagstruct_get_volume)
+NOT_IMPLEMENTED(pa_tagstruct_gets)
+NOT_IMPLEMENTED(pa_tagstruct_gets64)
+NOT_IMPLEMENTED(pa_tagstruct_getu32)
+NOT_IMPLEMENTED(pa_tagstruct_getu64)
+NOT_IMPLEMENTED(pa_tagstruct_getu8)
+NOT_IMPLEMENTED(pa_tagstruct_new)
+NOT_IMPLEMENTED(pa_tagstruct_put)
+NOT_IMPLEMENTED(pa_tagstruct_put_arbitrary)
+NOT_IMPLEMENTED(pa_tagstruct_put_boolean)
+NOT_IMPLEMENTED(pa_tagstruct_put_channel_map)
+NOT_IMPLEMENTED(pa_tagstruct_put_cvolume)
+NOT_IMPLEMENTED(pa_tagstruct_put_format_info)
+NOT_IMPLEMENTED(pa_tagstruct_put_proplist)
+NOT_IMPLEMENTED(pa_tagstruct_put_sample_spec)
+NOT_IMPLEMENTED(pa_tagstruct_put_timeval)
+NOT_IMPLEMENTED(pa_tagstruct_put_usec)
+NOT_IMPLEMENTED(pa_tagstruct_put_volume)
+NOT_IMPLEMENTED(pa_tagstruct_puts)
+NOT_IMPLEMENTED(pa_tagstruct_puts64)
+NOT_IMPLEMENTED(pa_tagstruct_putu32)
+NOT_IMPLEMENTED(pa_tagstruct_putu64)
+NOT_IMPLEMENTED(pa_tagstruct_putu8)
+NOT_IMPLEMENTED(pa_thread_free)
+NOT_IMPLEMENTED(pa_thread_free_nojoin)
+NOT_IMPLEMENTED(pa_thread_get_data)
+NOT_IMPLEMENTED(pa_thread_get_name)
+NOT_IMPLEMENTED(pa_thread_is_running)
+NOT_IMPLEMENTED(pa_thread_join)
+NOT_IMPLEMENTED(pa_thread_new)
+NOT_IMPLEMENTED(pa_thread_self)
+NOT_IMPLEMENTED(pa_thread_set_data)
+NOT_IMPLEMENTED(pa_thread_set_name)
+NOT_IMPLEMENTED(pa_thread_yield)
+NOT_IMPLEMENTED(pa_threaded_mainloop_accept)
+NOT_IMPLEMENTED(pa_threaded_mainloop_free)
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_get_api)*/
+NOT_IMPLEMENTED(pa_threaded_mainloop_get_retval)
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_in_thread)*/
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_lock)*/
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_new)*/
+NOT_IMPLEMENTED(pa_threaded_mainloop_set_name)
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_signal)*/
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_start)*/
+NOT_IMPLEMENTED(pa_threaded_mainloop_stop)
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_unlock)*/
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_wait)*/
+NOT_IMPLEMENTED(pa_timespec_load)
+NOT_IMPLEMENTED(pa_timespec_store)
+NOT_IMPLEMENTED(pa_timeval_add)
+NOT_IMPLEMENTED(pa_timeval_age)
+NOT_IMPLEMENTED(pa_timeval_cmp)
+NOT_IMPLEMENTED(pa_timeval_diff)
+NOT_IMPLEMENTED(pa_timeval_load)
+NOT_IMPLEMENTED(pa_timeval_rtstore)
+NOT_IMPLEMENTED(pa_timeval_store)
+NOT_IMPLEMENTED(pa_timeval_sub)
+NOT_IMPLEMENTED(pa_tls_free)
+NOT_IMPLEMENTED(pa_tls_get)
+NOT_IMPLEMENTED(pa_tls_new)
+NOT_IMPLEMENTED(pa_tls_set)
+NOT_IMPLEMENTED(pa_tokenizer_free)
+NOT_IMPLEMENTED(pa_tokenizer_get)
+NOT_IMPLEMENTED(pa_tokenizer_new)
+NOT_IMPLEMENTED(pa_truncate_utf8)
+NOT_IMPLEMENTED(pa_uid_in_group)
+NOT_IMPLEMENTED(pa_uname_string)
+NOT_IMPLEMENTED(pa_unblock_sigs)
+NOT_IMPLEMENTED(pa_unblock_sigsv)
+NOT_IMPLEMENTED(pa_unescape)
+NOT_IMPLEMENTED(pa_unix_socket_is_stale)
+NOT_IMPLEMENTED(pa_unix_socket_remove_stale)
+NOT_IMPLEMENTED(pa_unlock_lockfile)
+NOT_IMPLEMENTED(pa_unset_env_recorded)
+/*NOT_IMPLEMENTED(pa_usec_to_bytes)*/
+NOT_IMPLEMENTED(pa_usec_to_bytes_round_up)
+NOT_IMPLEMENTED(pa_utf8_filter)
+NOT_IMPLEMENTED(pa_utf8_to_locale)
+NOT_IMPLEMENTED(pa_utf8_valid)
+NOT_IMPLEMENTED(pa_volume_func_init_arm)
+NOT_IMPLEMENTED(pa_volume_func_init_mmx)
+NOT_IMPLEMENTED(pa_volume_func_init_sse)
+NOT_IMPLEMENTED(pa_volume_snprint)
+NOT_IMPLEMENTED(pa_volume_snprint_verbose)
+NOT_IMPLEMENTED(pa_vsnprintf)
+NOT_IMPLEMENTED(pa_vsprintf_malloc)
+NOT_IMPLEMENTED(pa_will_need)
+NOT_IMPLEMENTED(pa_write)
+NOT_IMPLEMENTED(pa_x11_del_prop)
+NOT_IMPLEMENTED(pa_x11_get_prop)
+NOT_IMPLEMENTED(pa_x11_set_prop)
+NOT_IMPLEMENTED(pa_xfree)
+NOT_IMPLEMENTED(pa_xfreev)
+NOT_IMPLEMENTED(pa_xmalloc)
+NOT_IMPLEMENTED(pa_xmalloc0)
+NOT_IMPLEMENTED(pa_xmemdup)
+NOT_IMPLEMENTED(pa_xrealloc)
+NOT_IMPLEMENTED(pa_xstrdup)
