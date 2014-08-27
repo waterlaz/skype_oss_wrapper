@@ -399,23 +399,6 @@ int *pa_context_set_source_volume_by_index(int *c, uint32_t idx,
 }
 
 
-enum  	pa_subscription_event_type {
-  PA_SUBSCRIPTION_EVENT_SINK = 0x0000U,
-  PA_SUBSCRIPTION_EVENT_SOURCE = 0x0001U,
-  PA_SUBSCRIPTION_EVENT_SINK_INPUT = 0x0002U,
-  PA_SUBSCRIPTION_EVENT_SOURCE_OUTPUT = 0x0003U,
-  PA_SUBSCRIPTION_EVENT_MODULE = 0x0004U,
-  PA_SUBSCRIPTION_EVENT_CLIENT = 0x0005U,
-  PA_SUBSCRIPTION_EVENT_SAMPLE_CACHE = 0x0006U,
-  PA_SUBSCRIPTION_EVENT_SERVER = 0x0007U,
-  PA_SUBSCRIPTION_EVENT_CARD = 0x0009U,
-  PA_SUBSCRIPTION_EVENT_FACILITY_MASK = 0x000FU,
-  PA_SUBSCRIPTION_EVENT_NEW = 0x0000U,
-  PA_SUBSCRIPTION_EVENT_CHANGE = 0x0010U,
-  PA_SUBSCRIPTION_EVENT_REMOVE = 0x0020U,
-  PA_SUBSCRIPTION_EVENT_TYPE_MASK = 0x0030U
-};
-
 typedef enum pa_subscription_event_type pa_subscription_event_type_t;
 
 typedef void(* pa_context_subscribe_cb_t)(int *c, pa_subscription_event_type_t t, uint32_t idx, void *userdata);
@@ -429,45 +412,6 @@ void pa_context_set_subscribe_callback  (int *c, pa_context_subscribe_cb_t  cb, 
     subscribe_callback = cb;
 }
 
-typedef enum pa_subscription_mask {
-    PA_SUBSCRIPTION_MASK_NULL = 0x0000U,
-    /**< No events */
-
-    PA_SUBSCRIPTION_MASK_SINK = 0x0001U,
-    /**< Sink events */
-
-    PA_SUBSCRIPTION_MASK_SOURCE = 0x0002U,
-    /**< Source events */
-
-    PA_SUBSCRIPTION_MASK_SINK_INPUT = 0x0004U,
-    /**< Sink input events */
-
-    PA_SUBSCRIPTION_MASK_SOURCE_OUTPUT = 0x0008U,
-    /**< Source output events */
-
-    PA_SUBSCRIPTION_MASK_MODULE = 0x0010U,
-    /**< Module events */
-
-    PA_SUBSCRIPTION_MASK_CLIENT = 0x0020U,
-    /**< Client events */
-
-    PA_SUBSCRIPTION_MASK_SAMPLE_CACHE = 0x0040U,
-    /**< Sample cache events */
-
-    PA_SUBSCRIPTION_MASK_SERVER = 0x0080U,
-    /**< Other global server changes. */
-
-/** \cond fulldocs */
-    PA_SUBSCRIPTION_MASK_AUTOLOAD = 0x0100U,
-    /**< \deprecated Autoload table events. */
-/** \endcond */
-
-    PA_SUBSCRIPTION_MASK_CARD = 0x0200U,
-    /**< Card events. \since 0.9.15 */
-
-    PA_SUBSCRIPTION_MASK_ALL = 0x02ffU
-    /**< Catch all events */
-} pa_subscription_mask_t;
 
 typedef void(* pa_context_success_cb_t)(int *c, int success, void *userdata);
 
@@ -475,12 +419,6 @@ int* pa_context_subscribe(int *c, pa_subscription_mask_t m, pa_context_success_c
     log("Subscribing(pa_context_subscribe) mask=%0x   callback=%p   userdata=%p \n", m, cb, userdata);
  
 }
-
-typedef struct pa_spawn_api {
-    void (*prefork)(void);
-    void (*postfork)(void);
-    void (*atfork)(void);
-} pa_spawn_api;
 
 int pa_context_connect (int * c, const char * server, int flags, pa_spawn_api *api){
     if(api!=NULL)
@@ -505,28 +443,10 @@ int pa_threaded_mainloop_in_thread(int *m){
 }
 
 
-enum    pa_context_state {
-    PA_CONTEXT_UNCONNECTED,
-    PA_CONTEXT_CONNECTING,
-    PA_CONTEXT_AUTHORIZING,
-    PA_CONTEXT_SETTING_NAME,
-    PA_CONTEXT_READY,
-    PA_CONTEXT_FAILED,
-    PA_CONTEXT_TERMINATED
-};
-typedef enum pa_context_state  pa_context_state_t;
-
 pa_context_state_t pa_context_get_state(int *c){
     return PA_CONTEXT_READY;
 }
 
-enum  	pa_operation_state {
-  PA_OPERATION_RUNNING,
-  PA_OPERATION_DONE,
-  PA_OPERATION_CANCELLED
-};
-
-typedef enum pa_operation_state 	pa_operation_state_t;
 
 pa_operation_state_t pa_operation_get_state(int *o){
     log("pa_operation_get_state: reporting operation done\n");
