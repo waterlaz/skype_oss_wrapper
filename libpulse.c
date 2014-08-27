@@ -1415,7 +1415,7 @@ int pa_stream_write(stream_t *s, const void *data, size_t nbytes, pa_free_cb_t f
 int* pa_stream_trigger(stream_t* s, pa_stream_success_cb_t cb, void *userdata){
     log("pa_stream_trigger: nothing to do\n");
     in_thread = 1;
-    cb(s, 1, userdata);
+    if(cb) cb(s, 1, userdata);
     in_thread = 0;
     return &operation;
 }
@@ -1442,14 +1442,14 @@ typedef void(* pa_context_success_cb_t)(int *c, int success, void *userdata);
 int* pa_context_set_sink_volume_by_index(int *c, uint32_t idx, const int *volume, 
                                          pa_context_success_cb_t cb, void *userdata){
     log("pa_context_set_sink_volume_by_index: not doing anything\n");
-    cb(c, 1, userdata);
+    if(cb) cb(c, 1, userdata);
     return &operation;
 }
 
 int *pa_context_set_source_volume_by_index(int *c, uint32_t idx, 
                                            const int *volume, pa_context_success_cb_t cb, void *userdata){
-    log("pa_context_set_source_volume_by_index: not doing anything\n");
-    //cb(c, 1, userdata); this causes segfault :(
+    log("pa_context_set_source_volume_by_index: not doing anything  cb=%p\n", cb);
+    if(cb) cb(c, 1, userdata);
     return &operation;
 }
 
