@@ -10,9 +10,7 @@
 
 #include "libpulse.h"
 
-
-
-#define log empty_log
+#define log empty_log /* Change this to printf to get some debug info */
 
 static void empty_log(char* format, ...){
     
@@ -74,7 +72,7 @@ int* pa_context_drain(int *c, pa_context_notify_cb_t cb, void *userdata){
     return NULL;
 }
 
-int mainloop=1;
+static int mainloop=1;
 
 int* pa_threaded_mainloop_new  (void){
     log("pa_threaded_mainloop_new: Faking new mainloop\n");
@@ -84,7 +82,6 @@ int* pa_threaded_mainloop_new  (void){
 why_buffer* why_buffer_new(size_t size){
     why_buffer* b = (why_buffer*)malloc(sizeof(why_buffer));
     b->buffer = (char*)malloc(size);
-    //b->head = 0;
     b->tail = 0;
     pthread_mutex_init(&b->mutex, NULL);
     return b;
@@ -134,7 +131,6 @@ pa_channel_map *pa_channel_map_init_mono(pa_channel_map *m){
     return m;
 }
 
-int stream1 = 6;
 
 stream_t *pa_stream_new(int *c, const char *name, pa_sample_spec *ss, const pa_channel_map *map){
     log("pa_stream_new:   name=%s    sample_channels=%d     sample_rate=%d    sample_format=%d\n",  
@@ -151,7 +147,7 @@ stream_t *pa_stream_new(int *c, const char *name, pa_sample_spec *ss, const pa_c
 }
 
 int pa_sample_spec_valid(const pa_sample_spec *spec){
-    log("Reporting valid specification(pa_sample_spec_valid)\n");
+    log("pa_sample_spec_valid: reporting valid specification\n");
     return 1;
 }
 
@@ -176,12 +172,8 @@ const char *pa_sample_format_to_string(pa_sample_format_t f) {
 }
 
 
-char* pa_sample_spec_snprint(char * s,  size_t l, const pa_sample_spec * spec){
-    log("sample spec print %p %zu %p  \n", s, l, spec);
- /*   assert(s);
-    assert(l > 0);
-    assert(spec);*/
-    //static char s1[1000];
+char* pa_sample_spec_snprint(char *s,  size_t l, const pa_sample_spec *spec){
+    log("pa_sample_spec_snprint: %p %zu %p  \n", s, l, spec);
     snprintf(s, l, ("%s %uch %uHz"), pa_sample_format_to_string(spec->format), spec->channels, spec->rate);
     log("Printing sample spec(pa_sample_spec_snprint): %s\n", s);
     return s;
@@ -246,6 +238,7 @@ static void *oss_thread_function(void *s1){
     size_t n_data;
     while(s->running){
         if(s->read_callback){
+            /* This just spams skype with requests to read data from the microphone (probably not a good idea but works) */
             s->read_callback(s, 31200, s->read_userdata);
             usleep(100000);
         }
@@ -262,7 +255,6 @@ static void *oss_thread_function(void *s1){
             
         }
     }
-    //why_buffer_delete(s->buffer);
     log("exiting oss thread\n");
 }
 
@@ -416,7 +408,7 @@ void pa_context_set_subscribe_callback  (int *c, pa_context_subscribe_cb_t  cb, 
 typedef void(* pa_context_success_cb_t)(int *c, int success, void *userdata);
 
 int* pa_context_subscribe(int *c, pa_subscription_mask_t m, pa_context_success_cb_t cb, void *userdata){
-    log("Subscribing(pa_context_subscribe) mask=%0x   callback=%p   userdata=%p \n", m, cb, userdata);
+    log("pa_context_subscribe: subscribing mask=%0x   callback=%p   userdata=%p \n", m, cb, userdata);
  
 }
 
@@ -457,9 +449,12 @@ void pa_operation_unref (int *o){
     log("pa_operation_unref: nothing to do\n");
 }
 
+void pa_init_i18n(void){
+    log("pa_init_i18n: nothing to do\n");
+}
 
 /* The following functions don't seem to be used by skype. 
- * Nevertheless, skype does call the pa_threaded_mainloop_get_api functions, 
+ * Nevertheless, skype does call the pa_threaded_mainloop_get_api function, 
  * so we keep it to be safe: */
 
 static void* d_io_new(){
@@ -509,16 +504,12 @@ static void d_quit(){
     log("quit\n");
 }
 
-void* d_rtclock_time_new(){
+static void* d_rtclock_time_new(){
     log("d_rtclock_time_new\n");
     return NULL;
 }
-void d_rtclock_time_restart(){
+static void d_rtclock_time_restart(){
     log("d_rtclock_time_restart\n");
-}
-
-void pa_init_i18n(void){
-    log("INIT: pa_init_i18n\n");
 }
 
 pa_mainloop_api api;
@@ -552,6 +543,7 @@ pa_mainloop_api* pa_threaded_mainloop_get_api (int * m){
 
 /* This is a complete list of pulseaudio symbols: */
 
+#define NOT_IMPLEMENTED(f) int f(){ printf("NOT IMPLEMENTED:" #f  "\n"); };
 
 NOT_IMPLEMENTED(pa_accept_cloexec)
 NOT_IMPLEMENTED(pa_ascii_filter)

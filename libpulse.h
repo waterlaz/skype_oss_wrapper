@@ -1,8 +1,6 @@
 #ifndef __LIBPULSE_H_
 #define __LIBPULSE_H_ 
 
-#define NOT_IMPLEMENTED(f) int f(){ printf("NOT IMPLEMENTED:" #f  "\n"); };
-
 typedef struct pa_mainloop_api{
     void *userdata;
 
