@@ -3,12 +3,12 @@ skype_oss_wrapper
 
 A fake libpulse.so library that mimics pulseaudio behavior for skype
 
-COMPILING:
+1.COMPILING:
   INSTALL_PATH=/usr/local make
   Replace "/usr/local" with desired destination (defaults to /opt)
   
-INSTALATION:
+2.INSTALLING:
   make install
   
-RUNNING:
-  just run skype_oss
+3.RUNNING:
+  Just run skype_oss
