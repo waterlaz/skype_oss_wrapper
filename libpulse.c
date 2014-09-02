@@ -59,12 +59,20 @@ const char* pa_get_library_version(void){
     return version;
 }
 
+void pa_threaded_mainloop_free(int *m){
+    log("pa_threaded_mainloop_free: nothing to do\n");
+}
+
 
 static int context = 2;
 
 int* pa_context_new  (  pa_mainloop_api *   mainloop, const char *    name  ){
     log("pa_context_new: mainloop_api=%p  and name=%s\n", mainloop, name); 
     return &context;
+}
+
+void pa_context_disconnect (int *c){
+    log("pa_context_disconnec: nothing to do\n");
 }
 
 int* pa_context_drain(int *c, pa_context_notify_cb_t cb, void *userdata){
@@ -621,7 +629,7 @@ NOT_IMPLEMENTED(pa_config_parse_string)
 NOT_IMPLEMENTED(pa_config_parse_unsigned)
 NOT_IMPLEMENTED(pa_context_add_autoload)
 /*NOT_IMPLEMENTED(pa_context_connect)*/
-NOT_IMPLEMENTED(pa_context_disconnect)
+/*NOT_IMPLEMENTED(pa_context_disconnect)*/
 /*NOT_IMPLEMENTED(pa_context_drain)*/
 NOT_IMPLEMENTED(pa_context_errno)
 NOT_IMPLEMENTED(pa_context_exit_daemon)
@@ -1405,7 +1413,7 @@ NOT_IMPLEMENTED(pa_thread_set_data)
 NOT_IMPLEMENTED(pa_thread_set_name)
 NOT_IMPLEMENTED(pa_thread_yield)
 NOT_IMPLEMENTED(pa_threaded_mainloop_accept)
-NOT_IMPLEMENTED(pa_threaded_mainloop_free)
+/*NOT_IMPLEMENTED(pa_threaded_mainloop_free)*/
 /*NOT_IMPLEMENTED(pa_threaded_mainloop_get_api)*/
 NOT_IMPLEMENTED(pa_threaded_mainloop_get_retval)
 /*NOT_IMPLEMENTED(pa_threaded_mainloop_in_thread)*/
