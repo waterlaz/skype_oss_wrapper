@@ -413,8 +413,6 @@ void pa_context_set_subscribe_callback  (int *c, pa_context_subscribe_cb_t  cb, 
 }
 
 
-typedef void(* pa_context_success_cb_t)(int *c, int success, void *userdata);
-
 int* pa_context_subscribe(int *c, pa_subscription_mask_t m, pa_context_success_cb_t cb, void *userdata){
     log("pa_context_subscribe: subscribing mask=%0x   callback=%p   userdata=%p \n", m, cb, userdata);
  
