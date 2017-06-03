@@ -281,9 +281,7 @@ int pa_stream_drop(stream_t *p){
 }
 
 
-int pa_stream_connect_playback (stream_t *s, const char *dev, const pa_buffer_attr *attr,	
-                                int flags, const int *volume,	int *sync_stream){
-    log("pa_stream_connect_playback: device_name=%s    attr=%p  sync_stream=%p\n", dev, attr, sync_stream);
+static int wrapper_connect_stream(const char* dsp, stream_t *s, const char *dev, const pa_buffer_attr *attr, int flags){
     if(attr) s->buffer_attr = *attr;
     else{
         s->buffer_attr.maxlength = 1024000;
@@ -299,71 +297,44 @@ int pa_stream_connect_playback (stream_t *s, const char *dev, const pa_buffer_at
     s->notify_callback(s, s->notify_userdata);
     in_thread=0;
     log("Done state callback\n");
-    const char* dsp = getenv("SKYPE_OSS_OUTPUT_DEV");
-    if (!dsp) dsp = "/dev/dsp";
     if ((s->fd = open(dsp, O_RDWR)) == -1) {
-		log("Error: failed to open %s\n", dsp);
+        log("Error: failed to open %s\n", dsp);
 	}
     
     int i, j;
 #define SET(what, to) i = to; \
-	j = ioctl(s->fd, what, &i); \
-	if (j == -1) \
-		log("Error: failed to set %s to %i\n", #what, i);
+    j = ioctl(s->fd, what, &i); \
+    if (j == -1) \
+        log("Error: failed to set %s to %i\n", #what, i);
 
-	SET(SNDCTL_DSP_CHANNELS, s->sample_spec.channels);
-	SET(SNDCTL_DSP_SETFMT, AFMT_S16_NE);
-	SET(SNDCTL_DSP_SPEED, s->sample_spec.rate);
+    SET(SNDCTL_DSP_CHANNELS, s->sample_spec.channels);
+    SET(SNDCTL_DSP_SETFMT, AFMT_S16_NE);
+    SET(SNDCTL_DSP_SPEED, s->sample_spec.rate);
     
     s->running=1;
     
     pthread_create(&s->thread, NULL, (void* )oss_thread_function, s);
-    //pthread_detach(s->thread);
-    
     return 0;
-    
+}
+
+int pa_stream_connect_playback (stream_t *s, const char *dev, const pa_buffer_attr *attr,	
+                                int flags, const int *volume,	int *sync_stream){
+    log("pa_stream_connect_playback: device_name=%s    attr=%p\n", dev, attr);
+    const char* dsp = getenv("SKYPE_OSS_OUTPUT_DEV");
+    if (!dsp){ 
+        dsp = "/dev/dsp";
+    }
+    return wrapper_connect_stream(dsp, s, dev, attr, flags);
 }
 
 int pa_stream_connect_record(stream_t* s, const char *dev, const pa_buffer_attr *attr, int flags){
     log("pa_stream_connect_record: device_name=%s    attr=%p\n", dev, attr);
-    log("#################################\n");
-    if(attr) s->buffer_attr = *attr;
-    else{
-        s->buffer_attr.maxlength = 1024000;
-        s->buffer_attr.tlength = 51200;
-        s->buffer_attr.prebuf = 0;
-        s->buffer_attr.minreq = 0;
-        s->buffer_attr.fragsize = 51200;
-    }
-    s->buffer = why_buffer_new(1024000);
-    
-    log("State callback:\n");
-    in_thread=1;
-    s->notify_callback(s, s->notify_userdata);
-    in_thread=0;
-    log("Done state callback\n");
+    s->write_callback = NULL;
     const char* dsp = getenv("SKYPE_OSS_INPUT_DEV");
-    if (!dsp) dsp = "/dev/dsp";
-    if ((s->fd = open(dsp, O_RDWR)) == -1) {
-		log("Error: failed to open %s\n", dsp);
-	}
-    
-    int i, j;
-#define SET(what, to) i = to; \
-	j = ioctl(s->fd, what, &i); \
-	if (j == -1) \
-		log("Error: failed to set %s to %i\n", #what, i);
-
-	SET(SNDCTL_DSP_CHANNELS, s->sample_spec.channels);
-	SET(SNDCTL_DSP_SETFMT, AFMT_S16_NE);
-	SET(SNDCTL_DSP_SPEED, s->sample_spec.rate);
-    
-    s->running=1;
-    
-    pthread_create(&s->thread, NULL, (void* )oss_thread_function, s);
-    //pthread_detach(s->thread);
-    
-    return 0;
+    if (!dsp){ 
+        dsp = "/dev/dsp";
+    }
+    return wrapper_connect_stream(dsp, s, dev, attr, flags);
 }
 
 
